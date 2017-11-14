@@ -1,0 +1,9 @@
+.input-form-style {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  z-index: -9999;
+}

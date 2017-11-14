@@ -1,0 +1,21 @@
+* {
+  font-size: 9px;
+}
+table.table-bordered {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 2px;
+}
+td.pushCenter,
+th.pushCenter {
+  text-align: center;
+}
+.pushLeft {
+  text-align: left;
+}
+.pushRight {
+  text-align: right;
+}

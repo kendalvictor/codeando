@@ -1,0 +1,126 @@
+
+
+header
+    height 60px
+    width  100%
+    background color_white
+    box-sizing border-box
+    border-bottom solid 1px color_background
+    .container-all
+        padding-left 15px
+        padding-right 15px
+        .row
+            align-items center
+            .icon-menu
+                padding 14px 10px 14px 0px
+                /*height 100%
+                padding 8px*/
+                color color_sidebar
+                font-size 32px
+                transition 0.3s ease all
+                &:hover
+                    color color_main
+                /*  background color_main*/
+            .avatar-thumb
+                position relative
+                cursor pointer
+                padding 10px
+                figure
+                    margin-right 5px
+                    img
+                        border 2px solid color_background
+                h5.username
+                    color color_sidebar
+                    transition 0.3s ease all
+                    font-size 16px
+                    i
+                        transition 0.3s ease all
+                        color color_sidebar
+                        font-size 12px
+
+            .avatar-thumb:hover
+                h5.username
+                    color color_main
+                    i
+                        color color_main
+            .container-notification
+                position relative
+                >a
+                    display block
+                    position relative
+                    margin-right 20px
+                    span.number
+                        position absolute
+                        top 5px
+                        right 8px
+                        z-index 10
+                        font-size 12px
+                        background color_info
+                        color color_white
+                        padding 3px
+                        display block
+                        border-radius 4px
+                .icon-notification
+                    padding 20px 10px 16px 10px
+                    color color_sidebar
+                    font-size 24px
+                    transition 0.3s ease all
+                    &:hover
+                        color color_main
+
+ul.toggle-card-active
+    top 110% !important
+    opacity 1 !important
+    z-index 10 !important
+ul.toggle-card
+    border-radius 4px
+    /*box-shadow 0px 1px 3px color_black*/
+    /*border 2px solid color_black*/
+    box-shadow rgba(0,0,0,0.4) 0px 2px 6px
+    background color_white
+    position absolute
+    z-index -1
+    opacity 0
+    top 140%
+    right 0px
+    margin 0
+    transition 0.4s ease all
+    li:first-child
+        border-top-left-radius 4px
+        border-top-right-radius 4px
+    li:last-child
+        border-bottom-left-radius 4px
+        border-bottom-right-radius 4px
+    li
+        max-width 200px
+        transition 0.2s ease all
+        a
+            display block
+            min-width 130px
+            padding 10px 30px
+            color color_sidebar
+            font-size 14px
+            transition 0.2s ease all
+            i
+                color color_sidebar
+                margin-right 5px
+                transition 0.2s ease all
+        &:hover
+            background color_sidebar
+            a
+                color color_main
+                i
+                    color color_main
+footer
+    width 100%
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    margin auto
+    background color_white
+    padding 8px 15px
+    box-sizing border-box
+    z-index 20
+    span
+        font-size 14px

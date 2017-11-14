@@ -1,0 +1,165 @@
+@import "themes/default.styl"
+.formBasic
+    .table-content
+        width: 100%
+.table-content-pop-up
+    overflow-x auto !important
+    height 180px
+    margin-top 0 !important
+    overflow-y scroll
+.page-paquete
+    // .table_list_armador
+    //      td
+    //         cursor pointer
+    .V
+        background color_success
+        border-right 1px solid color_success
+    .V0
+        background: repeating-linear-gradient(
+          45deg,
+          #000 15px,
+          #000 20px,
+          color_success 20px,
+          color_success 30px
+    )
+    .R
+        background color_danger
+    .C
+        background color_info
+    .R0
+        background: repeating-linear-gradient(45deg, #000 16px, #000 19px, #d9534f 20px, #d9534f 33px)
+    .A
+        background color_warning
+    td
+        padding 5px !important
+        .btn
+            padding 5px 10px
+
+    .table-content
+        input
+            width 100%
+    .dataTables_wrapper .dataTables_filter
+            display none
+
+    #datatable_armadores, #datatablePaquete, #datatable_armador
+
+        th.dia-actual
+            background #1c7293
+
+        tbody
+            td
+                position relative
+                .armador_paquete_link
+                    color color_info
+                .dia
+                    cursor pointer
+                    height 100%
+                    width calc(100% + 2px)
+                    position absolute
+                    left -1px
+                    top 0px
+
+                .dia-libre:hover
+
+                    background color_success
+                // .dia-actual
+                //     background
+                .dia-lleno
+                    background color_close
+                    border-right 1px solid color_close
+                .dia-lleno:hover
+                    background color_info
+                .dia-lleno:last-child
+                    border-right 1px solid color_sidebar
+                .dia-libre:hover
+                    background color_success
+            td.dia-seleccionar
+                    background #1C7293
+                    color white
+            td
+                .success, .V
+                    background color_success
+                    border-right 1px solid color_success
+            td
+                .warning, .A
+                    background color_warning
+            td
+                .danger, .R
+                    background color_danger
+            td
+                .info, .C
+                    background color_info
+
+            td
+                .danger_last, .R0
+                        background: repeating-linear-gradient(45deg, #000 16px, #000 19px, #d9534f 20px, #d9534f 33px)
+        // td:hover
+        //  background color_success
+.table-content
+        input
+            width 100%
+        .link
+            color color_info
+.error-data
+    border 2px solid color_danger !important
+.dataTables_wrapper .dataTables_filter
+        display none
+.notify
+    position fixed
+    left 10px
+    right 10px
+    top -500px
+    margin auto
+    box-sizing border-box
+    max-width 400px
+    color white
+    padding 10px 6px
+    border-radius 4px
+    border-radius 4px
+    z-index 9999999;
+    transition 0.3s ease all
+    opacity 0
+    p
+        margin 0px
+        margin 3px
+        color white
+        font-size 14px
+    ul, ol
+        padding 0px 10px 0px 25px
+    li
+        margin-bottom 4px
+        list-style-type disc
+        font-size 14px
+    li:last-child
+        margin-bottom 0
+.notify-activate
+    opacity 1
+    top 10px
+
+.notify--danger
+    background color_danger
+    border 1px solid color_danger_darken
+
+.notify--success
+    background color_success
+    border 1px solid color_success_darken
+
+
+tfoot
+    display table-row-group
+
+
+
+
+#pop-up-modificar-elmentos-observados
+    table
+        tr
+            td
+                padding 3px 5px
+//
+.tr-b-danger
+    background-color color_danger !important
+    color white
+
+
+

@@ -1,0 +1,212 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.header {
+  position: relative;
+}
+.header .header-logo {
+  text-align: center;
+}
+.header .header-logo img {
+  display: block;
+}
+.header .menu {
+  text-align: center;
+}
+.header .menu-item {
+  display: inline-block;
+}
+.header .menu-link {
+  display: inline-block;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.header .menu-link.active,
+.header .menu-link:hover {
+  background-color: #d3d3d3;
+}
+.responsive-logo {
+  margin-top: 10px;
+  width: 80%;
+  display: block;
+}
+.responsive-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  cursor: pointer;
+  -webkit-transition: all 0.45s ease;
+  -moz-transition: all 0.45s ease;
+  -o-transition: all 0.45s ease;
+  -ms-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+.menu-overlay.active {
+  z-index: 1000;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.menu-mobile-close,
+.menu-mobile-open {
+  background-color: #000;
+  border-radius: 7%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 28px;
+  height: 42px;
+  line-height: 42px;
+  position: fixed;
+  right: 5px;
+  text-align: center;
+  top: 5px;
+  -webkit-transition: all 0.45s ease;
+  -moz-transition: all 0.45s ease;
+  -o-transition: all 0.45s ease;
+  -ms-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+  width: 42px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.menu-mobile-open {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  visibility: hidden;
+  z-index: 1002;
+}
+.menu-mobile-open.scrolling {
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+}
+.menu-mobile-open:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.menu-mobile-open.active {
+  visibility: hidden;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  right: 220px;
+  z-index: 1000;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.menu-mobile-close {
+  visibility: hidden;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  z-index: 1000;
+  background: #fff;
+  color: c-first;
+}
+.menu-mobile-close.active {
+  visibility: visible;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  right: 205px;
+  z-index: 1002;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.menu-sidebar {
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  background: #fff;
+  z-index: 1000;
+  -webkit-transition: right 0.45s ease;
+  -moz-transition: right 0.45s ease;
+  -o-transition: right 0.45s ease;
+  -ms-transition: right 0.45s ease;
+  transition: right 0.45s ease;
+}
+.menu-sidebar.active {
+  right: 0;
+}
+.menu-responsive {
+  padding-top: 10px;
+}
+.menu-responsive .menu-item {
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+}
+.menu-responsive .menu-item a {
+  display: block;
+  text-indent: 20px;
+}
+.menu-responsive .menu-item a:hover,
+.menu-responsive .menu-item a.active {
+  background-color: #000;
+  color: #fff;
+}
+.cnt-wrapper,
+.footer {
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.45s ease;
+  -moz-transition: left 0.45s ease;
+  -o-transition: left 0.45s ease;
+  -ms-transition: left 0.45s ease;
+  transition: left 0.45s ease;
+}
+.cnt-wrapper.active,
+.footer.active {
+  left: -200px;
+}
+.wrapper {
+  overflow: hidden;
+}
+body.active {
+  overflow: hidden;
+}
+@media screen and (max-width: 1018px) {
+  .menu {
+    display: none;
+  }
+  .menu-mobile-open {
+    visibility: visible;
+  }
+}

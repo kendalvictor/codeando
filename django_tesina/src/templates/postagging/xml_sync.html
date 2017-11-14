@@ -1,0 +1,72 @@
+{% extends "common/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- start blog Section -->
+<section id="blg_sec" >
+	<div class="container opaco" style="margin-top: -20px">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="title_sec">
+					<h1>SINCRONIZACION CON CORPUS</h1>
+					<h4>De click en la imagen para iniciar la sincronización
+					</h4>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+                <center>
+				<div class="sngl_blg">
+                    <button id="ancora_load">
+                        <img src="{% static "/img/ancora_corpus_logo.png" %}"
+                        width="70%"
+						height="200px" alt=""/>
+                    </button>
+				</div>
+                </center>
+			</div>
+            <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+                <center>
+				<div class="sngl_blg">
+                    <button id="uam_load">
+                        <img src="{% static "/img/UAM_logo.jpg" %}"
+						width="70%"
+						height="250px" alt=""/>
+                    </button>
+				</div>
+                </center>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- start Blog Section -->
+{% endblock content %}
+{% block js_final %}
+<script type="text/javascript">
+  $(document).ready(function($){
+      var loader = $("#loader-wrapper");
+
+      $("#ancora_load").click(function(event){
+          event.preventDefault();
+          console.log("DIO CLICK EN IMAGEN");
+		  loader.show();
+          $.ajax({
+			  url: '{% url "tag:sync" %}',
+			  type: 'PUT',
+			  data: {},
+			  success: function(data){
+			      console.log("PROCESO CULMINADO");
+			      console.log("data : ", data);
+			      loader.hide()
+			  }
+          }).fail(function(jqXHR, status, error){
+              loader.hide();
+			  console.log("ERROR DETECTADO ", error)
+          });
+      });
+  });
+</script>
+
+{% endblock js_final %}
+
+
+

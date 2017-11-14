@@ -1,0 +1,67 @@
+// Colors idendity
+c-0 = #000
+c-1 = #000
+c-2 = #000
+c-3 = #000
+c-4 = #000
+c-5 = #000
+c-6 = #000
+c-7 = #000
+c-8 = #000
+c-9 = #eee
+
+// Fonts
+t-0 = 'arial', sans-serif
+t-1 = 'arial', sans-serif
+t-2 = 'arial', sans-serif
+t-3 = 'arial', sans-serif
+t-4 = 'arial', sans-serif
+t-5 = 'arial', sans-serif
+
+icomoon = 'icomoon'
+
+// Mixins
+placeholder(color,famyli)
+	::-webkit-input-placeholder { color: color; font-family: famyli; } /* WebKit */
+	:-moz-placeholder { color: color; font-family: famyli; } /* Firefox 18- */
+	::-moz-placeholder { color: color; font-family: famyli; } /* Firefox 19+ */
+	:-ms-input-placeholder { color: color; font-family: famyli; } /* IE 10+ */
+
+transition-all()
+	transition all 0.25s
+	
+cf()
+	zoom 1
+	&:after
+	&:before
+		content ""
+		display table
+	&:after
+		clear both
+.cf
+	cf()
+
+backgroundsize()
+	background-repeat no-repeat
+	background-size cover
+	background-position center center 		
+
+img-res()
+	width 100%
+	height auto
+	display block
+	
+background-t(color, alpha = 1)
+	ms-color = argb(color, alpha)
+	background rgba(color, alpha)
+	zoom 1
+	filter s('progid:DXImageTransform.Microsoft.gradient(startColorstr=%s,endColorstr=%s)', ms-color, ms-color) !important
+hex(decimal)
+	hex-value = ('0') ('1') ('2') ('3') ('4') ('5') ('6') ('7') ('8') ('9') ('A') ('B') ('C') ('D') ('E') ('F')
+	unquote(hex-value[floor(decimal / 16)] + hex-value[floor(decimal % 16)])
+	
+argb(color, alpha = 1)
+	unquote('#') + hex(alpha * 255) + hex(red(color)) + hex(green(color)) + hex(blue(color))
+
+
+	

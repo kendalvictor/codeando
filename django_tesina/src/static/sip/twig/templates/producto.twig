@@ -1,0 +1,38 @@
+<style type="text/css">
+    .itm-slick img{
+        margin: auto;
+    }
+</style>
+<style type="text/css">
+    .slick-prev:before, .slick-next:before{
+        color: black !important;
+    }
+</style>
+<div>
+    <h1>
+        {{producto.nombre}} | {{ producto.marca }}
+        <div class="contentSlider">
+            {% for row in producto.galeria %}
+            <div class="itm-slick">
+                <img src="{{ row }}">
+            </div>            
+            {% endfor %}
+        </div>
+        <p>
+        {% if producto.precio_oferta and producto.precio_oferta > 0 %}
+            <strong>Ahora :</strong>{{ producto.moneda }} {{ producto.precio_oferta }}<br>
+            <strong>Antes :</strong>{{ producto.moneda }} {{ producto.precio }}<br>
+        {% else %}
+            <strong>Precio :</strong>{{ producto.moneda }} {{ producto.precio }}<br>
+        {% endif %}
+        {% if producto.nuevo %}
+            <strong>Nuevo :</strong>Piticlin<br>
+        {% endif %}
+        </p>
+    </h1>
+</div>
+<script type="text/javascript">
+    $('.contentSlider').slick({
+        infinite: true
+    });
+</script>

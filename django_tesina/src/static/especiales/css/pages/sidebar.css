@@ -1,0 +1,190 @@
+.wrapper .aside-main {
+  transition: 0.3s ease all;
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  background: #232732;
+}
+.wrapper .aside-main .cnt-logo-admin {
+  height: 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .aside-main .cnt-logo-admin .titulo {
+  text-align: center;
+/*padding 10px 10px*/
+}
+.wrapper .aside-main .cnt-logo-admin .titulo h2 {
+  color: #fff;
+  font-weight: 400;
+}
+.wrapper .aside-main .cnt-logo-admin .titulo img {
+  height: 60px;
+  width: auto;
+}
+.wrapper .aside-main .cnt-logo-admin .titulo img.logo {
+  display: block;
+}
+.wrapper .aside-main .cnt-logo-admin .titulo img.logo-responsive {
+  display: none;
+}
+.wrapper .aside-main .cnt-usuario {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353b4b;
+}
+.wrapper .aside-main .cnt-usuario figure {
+  border-radius: 50%;
+  width: 50px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px;
+}
+.wrapper .aside-main .cnt-usuario figure img {
+  border-radius: 50%;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.wrapper .aside-main .cnt-usuario .usuario {
+  padding: 5px 5px;
+  display: inline-block;
+  width: 160px;
+  vertical-align: top;
+}
+.wrapper .aside-main .cnt-usuario .usuario h4.usuario-nombre {
+  color: #fff;
+/*font-family roboto*/
+  font-weight: 400;
+}
+.wrapper .aside-main .cnt-usuario .usuario p.usuario-cargo {
+/*font-family roboto*/
+  color: #fff;
+  margin: 0px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+.wrapper .aside-main .cnt-menu {
+  background: #232732;
+}
+.wrapper .aside-main .cnt-menu .menu-navegacion {
+  padding-left: 25px;
+}
+.wrapper .aside-main .cnt-menu .menu-navegacion h5 {
+  color: #faa800;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main {
+  padding: 0;
+/* ul.menu-secund
+
+                        max-height 500px*/
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main i.icon-sidebar {
+  margin-right: 5px;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main span {
+  font-size: 13px;
+  font-weight: 400;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main .icon-arrow-menu {
+  font-size: 10px;
+  float: right;
+  margin-top: 4px;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li:hover {
+  border-left: #faa800 4px solid;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li {
+  cursor: pointer;
+  list-style-type: none;
+  border-left: solid 4px transparent;
+  position: relative;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li >a:hover {
+  background: #353b4b;
+  color: #faa800;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li >a {
+  color: #fff;
+/*background red*/
+  transition: 0.2s ease all;
+  padding: 10px 20px 10px 20px;
+  display: block;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li ul.menu-secund {
+  background: #353b4b;
+  display: none;
+/*max-height 0px*/
+/*overflow hidden
+                        transition 0.5s ease all*/
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li ul.menu-secund li {
+  cursor: pointer;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li ul.menu-secund li a {
+  display: block;
+  color: #fff;
+  transition: 0.2s ease all;
+  padding: 10px 10px 10px 50px;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li ul.menu-secund li a span {
+  font-size: 13px;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li ul.menu-secund li a:hover {
+  color: #faa800;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li.active {
+  border-left: #faa800 4px solid;
+}
+.wrapper .aside-main .cnt-menu ul.ul-menu-main >li.active >a {
+  background: #353b4b;
+  color: #faa800;
+}
+.wrapper-active .aside-main {
+  width: 100px;
+}
+.wrapper-active .aside-main .cnt-logo-admin {
+  font-size: 0.6em;
+}
+.wrapper-active .aside-main .cnt-logo-admin .titulo img.logo {
+  display: none;
+}
+.wrapper-active .aside-main .cnt-logo-admin .titulo img.logo-responsive {
+  display: block;
+}
+.wrapper-active .aside-main .cnt-usuario {
+  display: none;
+}
+.wrapper-active .aside-main .cnt-menu ul.ul-menu-main >li a span.text-menu {
+  display: none;
+}
+.wrapper-active .aside-main .cnt-menu ul.ul-menu-main >li ul.menu-secund {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 20;
+  min-width: 150px;
+}
+.wrapper-active .aside-main .cnt-menu .menu-navegacion {
+  padding-left: 0;
+  text-align: center;
+}
+@media (max-width: 960px) {
+  .wrapper .container-main {
+    margin-left: 0px;
+  }
+  .wrapper .aside-main {
+    width: 0;
+  }
+  .wrapper-active .container-main {
+    margin-left: 100px;
+  }
+  .wrapper-active .aside-main {
+    width: 100px;
+  }
+}

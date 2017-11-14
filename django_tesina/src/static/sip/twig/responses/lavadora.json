@@ -1,0 +1,17 @@
+{
+	"producto":{
+		"nombre":"Lavadora",
+		"cat_url":"/static/twig/responses/productos-lavadoras.json",
+		"marca":"Samsung",
+		"precio":889.50,
+		"moneda":"S/.",
+		"precio_oferta":669.99,
+		"nuevo":true,
+		"proveedor":"Linio",
+		"galeria":[
+				"/static/img/lavadora.jpg",
+				"/static/img/lavadora.jpg",
+				"/static/img/lavadora.jpg"
+			]
+	}
+}

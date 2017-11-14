@@ -1,0 +1,38 @@
+{% load static %}
+<nav class="navbar navbar-inverse" id="main-header">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color: #333 !important;">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand .navbar-center" href="#">
+		  <a href="#portada_sec"><img src="{% static "/img/logo_unmsm.png" %}"
+              width="150" height="50" alt=""/></a>
+	  </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: #333 !important;">
+		<ul class="nav navbar-nav navbar-right" style="background-color: #1e282c">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" style="background-color: #333">
+            <li class="active"><a href="#bodywork"><i class="fa fa-home" style="margin-right: 3px"></i>HOME</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">¿Quienes Somos? <span class="caret" ></span></a>
+              <ul class="dropdown-menu" style="color: white;background-color: #333">
+                  <li><a href="#slider_sec" style="color:white">Presentación</a></li>
+                  <li><a href="#abt_sec" style="color:white">Reseña</a></li>
+                  <li><a href="#protfolio_sec" style="color:white">Portafolio</a></li>
+                  <li><a href="#tm_sec" style="color:white">Nuestro Equipo</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'tag:sincronizar' %}">SINCRONIZAR CORPUS</a></li>
+            <li><a href="{% url 'tag:cargar' %}">CARGAR JERGAS</a></li>
+            <li><a href="#ctn_sec">Contactanos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Header Section -->

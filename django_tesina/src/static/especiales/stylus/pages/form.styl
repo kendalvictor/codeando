@@ -1,0 +1,472 @@
+.panel
+    background color_white
+    box-sizing border-box
+    box-shadow rgba(0,0,0,0.1) 0px 2px 6px
+    .panel__header
+        /*background color_sidebar*/
+
+        border-bottom 1px solid color_sidebar
+        padding 10px 15px
+        h4
+            color color_sidebar
+    .panel__content
+        padding 15px 15px
+        form
+            margin-bottom 15px
+
+
+
+.formBasic
+
+    .form-group
+
+        //margin-bottom 10px
+        // input[type="submit"]
+        //  width 100%
+        textarea
+            width 100%
+            padding-left 5px
+            border-radius 3px
+            border 1px solid color_sidebar
+            box-sizing border-box
+
+            font-size 13px
+            &:focus
+                border 1px solid color_success
+                outline color_panel
+        input[type="text"], input[type="number"], input[type="password"]
+            width 100%
+            height 28px
+            padding-left 5px
+            border-radius 3px
+            border 1px solid color_sidebar
+            box-sizing border-box
+
+            font-size 13px
+            &:focus
+                border 1px solid color_success
+                outline color_panel
+        .select2-container
+            width 100% !important
+        .select2-container .select2-selection--single .select2-selection__rendered
+            font-size 14px
+        .select2-container--default .select2-selection--single
+            border 1px solid color_sidebar
+
+        select
+
+            width 100%
+            height 28px
+            margin-top 5px
+            font-size 13px
+            border-radius 3px
+            background color_white
+            border 1px solid color_sidebar
+            option
+                margin-top 50px
+
+            &:focus
+                border 1px solid color_success
+                outline color_panel
+        label
+
+            margin-bottom 2px
+            display block
+            font-size 14px
+            color color_sidebar
+    .form-fonts
+        position relative
+        i
+            position absolute
+            right 10px
+            top 0
+            font-size 20px
+            padding 10px 0px 10px 0px
+        input[type="text"], input[type="number"], input[type="password"]
+            width 100%
+            height 36px
+            padding-right 30px
+    p.error, span.error
+        margin 0
+        margin-top 5px
+        font-size 13px
+        color color_danger
+        display block
+    .table-content
+        margin-top 10px
+        overflow-x scroll
+
+        table
+            border 1px solid color_sidebar
+            border-collapse: collapse
+            width: 100%
+        input
+            // width 100%
+            height 23px
+            padding-left 5px
+            border-radius 3px
+            border 1px solid color_sidebar
+            box-sizing border-box
+
+            font-size 13px
+            &:focus
+                border 1px solid color_success
+                outline color_panel
+        th, td
+            text-align: left
+            padding: 8px
+        td
+            border 1px solid color_sidebar
+            font-size 12px
+            font-family fonts_paragraph
+            input[type="checkbox"]
+                width 20px
+                height 20px
+            p
+                margin 0
+        th
+            padding-right 18px
+            background-color: color_sidebar
+            color: white
+            font-family 'lato'
+            font-size 14px
+
+        tr
+            &:nth-child(even)
+                background-color: #f2f2f2
+
+.select2-results__option
+    font-size 13px
+    position relative
+    span
+        display block
+        width 100%
+        padding 5px
+        // position absolute
+        // left 0
+        // top 0
+        font-weight 900
+        color color_white
+        box-sizing border-box
+        // padding 6px
+    .C-V
+        background color_success
+        border-right 1px solid color_success
+    .C-V0
+        background: repeating-linear-gradient(
+          45deg,
+          #000 15px,
+          #000 20px,
+          color_success 20px,
+          color_success 30px
+    )
+    .C--
+        background color_white
+        color black
+    .C-R
+        background color_danger
+    .C-C
+        background color_info
+    .C-R0
+        background: repeating-linear-gradient(45deg, #000 16px, #000 19px, #d9534f 20px, #d9534f 33px)
+    .C-A
+        background color_warning
+    .C-R0
+        background: repeating-linear-gradient(45deg, #000 16px, #000 19px, #d9534f 20px, #d9534f 33px)
+/*buttons*/
+.btn
+    cursor pointer
+    margin 0
+    border 1px solid color_sidebar
+    padding 7px 15px
+    border-radius 4px
+    font-size 14px
+.btn--success
+    background color_success
+    color color_white
+
+    border 1px solid color_success_darken !important
+    transition 0.2s ease all
+    &:hover
+        background color_success_darken
+.btn--info
+    background color_info
+    color color_white
+
+    border 1px solid color_info_darken !important
+    transition 0.2s ease all
+    &:hover
+        background color_info_darken
+.btn--danger
+    background color_danger
+    color color_white
+
+    border 1px solid color_danger_darken !important
+    transition 0.2s ease all
+    &:hover
+        background color_danger_darken
+.btn--close
+    background color_close
+    color color_white
+    border 1px solid color_close_darken !important
+    transition 0.2s ease all
+    &:hover
+        background color_close_darken
+
+.btn--warning
+    background color_warning
+    color color_white
+    border 1px solid color_warning_darken !important
+    transition 0.2s ease all
+    &:hover
+        background color_warning_darken
+
+.btn--primary
+    background color_primary
+    color color_white
+    border 1px solid color_primary_darken !important
+    transition 0.2s ease all
+    &:hover
+        background color_primary_darken
+.btn--all
+    width 100%
+
+.text--success
+    color color_success
+    transition 0.2s ease all
+    &:hover
+        color color_success_darken
+.text--info
+
+    color color_info
+    transition 0.2s ease all
+    &:hover
+        color color_info_darken
+.text--danger
+
+    color color_danger
+    transition 0.2s ease all
+    &:hover
+        color color_danger_darken
+.text--close
+
+    color color_close
+    transition 0.2s ease all
+    &:hover
+        color color_close_darken
+
+.text--warning
+
+    color color_warning
+    transition 0.2s ease all
+    &:hover
+        color color_warning_darken
+
+.text--primary
+    color color_primary
+    transition 0.2s ease all
+    &:hover
+        color color_primary_darken
+
+.button-group
+    display flex
+    flex-wrap wrap
+    // .btn:last-child
+    //     margin-right 0px
+    // .btn:first-child
+    //     margin-left 0px
+    .btn
+        margin 0px 2px
+        margin-bottom 5px
+
+.dataTables_scroll
+    display flex
+    flex-direction column
+    .dataTables_scrollHead
+        order 1
+        table
+            margin-bottom 0
+
+    .dataTables_scrollBody
+        order 3
+    .dataTables_scrollFoot
+        order 2
+        table
+        margin-bottom 0
+.dataTables_wrapper .dataTables_filter input
+    margin-left 0
+.dataTables_wrapper .dataTables_paginate .paginate_button.current
+    background color_sidebar !important
+    color color_white !important
+    font-size 14px
+    padding 4px 10px
+    border 1px solid #111
+    &:hover
+        background color_sidebar !important
+        color white !important
+        border 1px solid #111
+table.dataTable thead .sorting
+    background-image url("../img/sort_both.png")
+table.dataTable thead .sorting_asc
+    background-image url("../img/sort_asc.png")
+table.dataTable thead .sorting_desc
+    background-image url("../img/sort_desc.png")
+.dataTables_wrapper .dataTables_info
+    font-family "roboto"
+.dataTables_length
+    margin-bottom 5px
+    select
+        height 20px
+        margin-top 5px
+        font-size 13px
+        border-radius 3px
+        background color_white
+        border 1px solid color_sidebar
+// date picker
+.datepicker
+    z-index 50
+.datepicker td.day.disabled
+    color #ccc
+/*message*/
+.message
+    padding 10px
+    text-align center
+    border-radius 4px
+    p
+        margin 0px
+        font-size 15px
+.message--danger
+    color color_danger_darken
+    background #ebccd1
+    border 1px solid color_danger_darken
+.test
+    display none
+.pop-up
+    transition 0.3s ease all
+
+    display none
+    height 100%
+    width 100%
+    position fixed
+    top 0px
+    left 0
+    z-index 40
+    padding 10px
+    box-sizing border-box
+    align-items center
+    right 0
+    margin auto
+    .pop-up-content-large
+        max-width 1400px !important
+    .pop-up-content
+        margin auto
+        margin-top 20px
+        width 100%
+        max-width 900px
+
+        transition 0.3s ease all
+        background color_white
+        position relative
+        z-index 40
+        border-radius 4px
+        .pop-up-close
+            position absolute
+            right 0
+            top 0
+            cursor pointer
+            background color_close
+            padding 5px
+            .icon-close
+                font-size 16px
+                color color_white
+    .pop-up-content--small
+        max-width 600px
+
+
+.pop-up-active
+    display block !important
+    .pop-up-content-active
+        opacity 1 !important
+
+.message-pop
+    transition 0.3s ease all
+    display none
+    height 100%
+    width 100%
+    position fixed
+    top 0px
+    left 0
+    z-index 300
+    padding 0px
+    box-sizing border-box
+    align-items center
+    right 0
+    margin auto
+    .message-pop-content--small
+
+        width 400px
+        max-width 400px
+        padding 20px 15px
+        box-sizing border-box
+        background white
+    .message-pop-border--warning
+        border 2px solid color_warning
+    .message-pop-border--success
+        border 2px solid color_success
+    .message-pop-border--danger
+        border 2px solid color_danger
+    .message-pop-content
+        min-height 170px
+        z-index 60
+        position fixed
+        left  0
+        right 0
+        margin auto
+        text-align center
+        transition 0.4s ease all
+        opacity 0
+        top calc(50% - 170px)
+
+        .message-pop-row
+            position relative
+
+            .message-pop-text
+                margin-top 10px
+                .text
+                    margin-top 5px
+                    margin-bottom 5px
+        .message-pop-icon
+            border-radius 50%
+            padding 15px
+            color color_white
+            font-size 46px
+            transition 0.6s
+            transform scale(0.3)
+        .message-pop-icon--danger
+            background color_danger
+        .message-pop-icon--success
+
+            background color_success
+        .message-pop-icon--warning
+
+            background color_warning
+.message-pop-active
+    display block !important
+    .message-pop-content-active
+        opacity 1
+        .message-pop-icon
+            transform scale(1) !important
+@media (max-width: 768px)
+    .formBasic .table-content th
+        font-size 14px
+    .dataTables_wrapper .dataTables_filter
+        display block
+        float inherit !important
+        margin-bottom 10px
+@media (max-width: 480px)
+    .button-group
+        .btn
+
+            font-size 13px
+    .btn
+        padding 8px 12px

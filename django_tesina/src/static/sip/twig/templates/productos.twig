@@ -1,0 +1,32 @@
+{% for row in productos %}
+    <div style="display: inline-block;width: 30%;padding: 1%;margin: 0.25%;border: 1px solid black;text-align: center;cursor: pointer;" class="wProdItem" data-uri="{{ row.url }}">
+        <h2>{{ row.nombre }} | {{ row.marca }}</h2>
+        <img src="{{ row.img }}" style="max-width: 100%;">
+        <p>
+        {% if row.precio_oferta and row.precio_oferta > 0 %}
+            <strong>Ahora :</strong>{{ row.moneda }} {{ row.precio_oferta }}<br>
+            <strong>Antes :</strong>{{ row.moneda }} {{ row.precio }}<br>
+        {% else %}
+            <strong>Precio :</strong>{{ row.moneda }} {{ row.precio }}<br>
+        {% endif %}
+        {% if row.nuevo %}
+            <strong>Nuevo :</strong>Piticlin<br>
+        {% endif %}
+        </p>
+    </div>
+{% endfor %}
+<script type="text/javascript">
+    $('.wProdItem').click(function(e){
+        e.preventDefault();
+        var uri = $(this).attr('data-uri');
+        $.ajax({
+            url: uri,
+            type: 'GET',
+            dataType: 'json',
+        })
+        .done(function(data) {
+            twigRender(data,'ajaxProd');
+            //console.log(data);
+        });
+    });
+</script>

@@ -1,0 +1,88 @@
+.pre-scrollable {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.pre-scrollable_printer {
+    overflow-y: scroll;
+    max-height: 600px;
+}
+
+.pre-scrollable-table {
+    overflow-y: scroll;
+    max-height: 650px;
+}
+
+.table-highlight .fa-hover a {
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.table-highlight tr:hover, td.hover {
+    background-color: #ccc !important;
+}
+
+.table-highlight td:hover {
+    background-color: #6ab9d0 !important;
+    color: white;
+}
+
+.modal_bg_info{
+    background-color: rgba(76, 70, 70, 0.6);
+    border-color: #00BCD4;
+    color: #fff;
+}
+.modal_bg_info2 {
+    /*background-color: #00BCD4;*/
+    background-color: #00BCD4;
+    border-color: #00BCD4;
+    color: #fff;
+}
+
+.bg-grey-600 {
+    background-color: #666;
+    border-color: #666;
+    color: #fff;
+}
+
+.table_bg-teal-400 {
+    background-color: #26A69A;
+    border-color: #26A69A;
+    color: #fff;
+}
+
+.text-semibold {
+    font-weight: bold !important;
+}
+
+.modal_bg_close {
+    color: #fff;
+    float: right;
+    margin-top: -2px;
+    padding: 1px 0px 0px 0px;
+}
+
+.modal_bg_close:hover {
+    color: #fff;
+}
+
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid #ddd;
+    box-sizing: content-box;
+    height: 0;
+}
+
+.table-xs > tbody > tr > td, .table-xs > tbody > tr > th, .table-xs > tfoot > tr > td, .table-xs > tfoot > tr > th, .table-xs > thead > tr > td, .table-xs > thead > tr > th {
+    padding: 8px 20px
+}
+
+
+@media (min-width: 769px) {
+  .modal-xs {
+    width: 500px;
+  }
+}

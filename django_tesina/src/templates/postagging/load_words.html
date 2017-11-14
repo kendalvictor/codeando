@@ -1,0 +1,74 @@
+{% extends "common/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- start blog Section -->
+<section id="blg_sec" >
+	<div class="container opaco" style="margin-top: -20px">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="title_sec">
+					<h1>CARGA DE PERUANISMOS</h1>
+					<h4>De click en la imagen para iniciar la carga </h4>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <center>
+				<div class="sngl_blg">
+                    <button id="link_load">
+                        <img src="{% static "/img/jhh.gif" %}" width="70%"
+						height="50%" alt=""/>
+                    </button>
+					<div class="post_info" style="display:none">
+						<div class="post_intro">
+							<h2>there are a few things</h2>
+							<i class="fa fa-picture-o"></i>
+						</div>
+						<ul>
+							<li>Oct 23 2015 //</li>
+							<li>Oct 23 2015 //</li>
+							<li>1 comment</li>
+						</ul>
+					</div>
+					<div class="post_content" style="display:none">
+						<p>Vestibulum sed pharetra risus, ac lacinia lorem. Etiam commodo laoreet rutrum. Praesent ut nulla in erat accumsan egestas pulvinar at ipsum. Aenean auctor, neque et dapibus lacinia, leo mauris rhoncus elit, id tincidunt purus orci ut eros. Suspendisse potenti. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</p>
+						<a href="">Read more <i class="fa fa-long-arrow-right"></i></a>
+					</div>
+				</div>
+                </center>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- start Blog Section -->
+{% endblock content %}
+{% block js_final %}
+<script type="text/javascript">
+  $(document).ready(function($){
+      var loader = $("#loader-wrapper");
+
+      $("#link_load").click(function(event){
+          event.preventDefault();
+          console.log("DIO CLICK EN IMAGEN");
+		  loader.show();
+          $.ajax({
+			  url: '{% url "tag:extraer" %}',
+			  type: 'PUT',
+			  data: {},
+			  success: function(data){
+			      console.log("PROCESO CULMINADO");
+			      console.log("data : ", data);
+			      loader.hide()
+			  }
+          }).fail(function(jqXHR, status, error){
+              loader.hide();
+			  console.log("ERROR DETECTADO ", error)
+          });
+      });
+  });
+</script>
+
+{% endblock js_final %}
+
+
+

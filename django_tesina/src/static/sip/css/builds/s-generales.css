@@ -1,0 +1,60 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapp-iframe-general {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 6px;
+  overflow: hidden;
+  background-color: #9fab26;
+  display: block;
+  padding-top: 0px;
+}
+.wrapp-iframe-general:first-child {
+  padding-top: 6px;
+}
+.name-dev {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font-family: 'Arial', sans-serif;
+  color: #9fab26;
+  border-bottom: 2px solid #9fab26;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+.btn-copy {
+  background-color: #9fab26;
+  display: inline-block;
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.btn-copy.hover {
+  background-color: #808080;
+}
+.inner-general {
+  background: #fff;
+  padding: 20px 0;
+}
+.general-wrapper {
+  padding: 10px;
+  border: 1px dashed #808080;
+  width: 98%;
+  margin: auto;
+  margin-top: 30px;
+}
+.block-general {
+  padding: 5px;
+}

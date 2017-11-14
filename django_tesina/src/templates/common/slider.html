@@ -1,0 +1,133 @@
+{% load static %}
+<style>
+	#item0{
+		background-image: url("{% static "/img/plastico.jpg" %}") !important;
+	}
+	#item1{
+		background-image: url("{% static "/img/lsh2.jpg" %}") !important;
+	}
+	#item2{
+		background-image: url("{% static "/img/esponjas_sinteticas.png" %}") !important;
+	}
+	#item3{
+		background-image: url("{% static "/img/coca_brae.png" %}") !important;
+	}
+	#item4{
+		background-image: url("{% static "/img/vraem.jpg" %}") !important;
+	}
+	#item5{
+		background-image: url("{% static "/img/luffa2.jpg" %}") !important;
+	}
+	#item6{
+		background-image: url("{% static "/img/fotot.jpg" %}") !important;
+	}
+	#item7{
+		background-image: url("{% static "/img/estadisticas.png" %}")
+	!important;
+	}
+	.wrap_caption{
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+		background-attachment: fixed !important;
+		background-size: cover !important;
+	}
+	.caption_carousel h1{
+		text-shadow: 3px 3px black;
+	}
+</style>
+<section id="slider_sec">
+	<br><br><br>
+	<div class="container">
+		<div class="row">
+			<br>
+			<div class="slider">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="6"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="7"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<div class="wrap_caption" id="item0">
+						  <div class="caption_carousel">
+							<h1>EL 13% de los residuos del mundo están
+								conformados por plastico</h1>
+						  </div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="wrap_caption" id="item1" >
+						  <div class="caption_carousel">
+							<h1>La necesidad del Aseo Personal</h1>
+						  </div>
+						</div>
+					</div>
+					<div class="item ">
+						<div class="wrap_caption" id="item2">
+						  <div class="caption_carousel">
+							<h1>Las Esponjas Convencionales no son
+								biodegradables</h1>
+						  </div>
+						</div>
+					</div>
+					<div class="item ">
+						<div class="wrap_caption" id="item3">
+						  <div class="caption_carousel">
+							<h1>En el Vraem la hoja de coca sigue siendo
+								un medio de supervivencia</h1>
+						  </div>
+						</div>
+					</div>
+					<div class="item ">
+						<div class="wrap_caption" id="item4">
+						  <div class="caption_carousel">
+							<h1>!!! Encontramos la solución </h1>
+						  </div>
+						</div>
+					</div>
+				  <div class="item ">
+						<div class="wrap_caption" id="item5">
+						  <div class="caption_carousel">
+							<h1>Una esponja 100% natural</h1>
+						  </div>
+						</div>
+					</div>
+				  <div class="item ">
+						<div class="wrap_caption" id="item6">
+						  <div class="caption_carousel">
+							<h1>Primer prototipo</h1>
+						  </div>
+						</div>
+					</div>
+				   <div class="item ">
+						<div class="wrap_caption" id="item7">
+						  <div class="caption_carousel">
+							<h1></h1>
+						  </div>
+						</div>
+					</div>
+				  </div>
+				  <!-- Controls -->
+				  <a class="left left_crousel_btn" href="#carousel-example-generic" role="button" data-slide="prev">
+					<i class="fa fa-angle-left"></i>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right right_crousel_btn" href="#carousel-example-generic" role="button" data-slide="next">
+					<i class="fa fa-angle-right"></i>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End slider Section -->

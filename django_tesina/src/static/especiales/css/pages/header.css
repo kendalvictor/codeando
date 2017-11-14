@@ -1,0 +1,74 @@
+header {
+  height: 60px;
+  width: 100%;
+  background: color_white;
+  box-sizing: border-box;
+  border-bottom: solid 1px color_background;
+}
+header .container-all {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+header .container-all .row {
+  align-items: center;
+}
+header .container-all .row .icon-menu {
+  padding: 14px 10px;
+/*height 100%
+				padding 8px*/
+  color: color_sidebar;
+  font-size: 32px;
+  transition: 0.3s ease all;
+/*	background color_main*/
+}
+header .container-all .row .icon-menu:hover {
+  color: color_main;
+}
+header .container-all .row .avatar-thumb {
+  cursor: pointer;
+  padding: 10px;
+/*&:hover
+					span
+						color color_main
+						i
+							color color_main*/
+}
+header .container-all .row .avatar-thumb figure {
+  margin-right: 5px;
+}
+header .container-all .row .avatar-thumb figure img {
+  border: 2px solid color_background;
+}
+header .container-all .row .avatar-thumb h4.username {
+  color: color_sidebar;
+  transition: 0.3s ease all;
+}
+header .container-all .row .avatar-thumb h4.username i {
+  color: color_sidebar;
+  font-size: 12px;
+}
+header .container-all .row .container-notification {
+  position: relative;
+  margin-right: 20px;
+}
+header .container-all .row .container-notification span.number {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  z-index: 10;
+  font-size: 12px;
+  background: color_info;
+  color: color_white;
+  padding: 3px;
+  display: block;
+  border-radius: 4px;
+}
+header .container-all .row .container-notification .icon-notification {
+  padding: 20px 10px 16px 10px;
+  color: color_sidebar;
+  font-size: 24px;
+  transition: 0.3s ease all;
+}
+header .container-all .row .container-notification .icon-notification:hover {
+  color: color_main;
+}

@@ -1,0 +1,56 @@
+@import "variables"
+.container-all
+    max-width 100%
+    margin auto
+
+
+.container
+    margin auto
+    max-width: device.movil
+    padding-left 20px
+    padding-right 20px
+
+
+.row
+    flex-wrap wrap
+    display flex
+    for num in (1..20)
+        .col-movil-{num*5}
+            width num*5%
+            padding 7px 15px
+            box-sizing border-box
+
+            .content
+                box-sizing border-box
+
+.row--end
+    justify-content flex-end
+.row--center
+    justify-content center
+.row--between
+    justify-content space-between
+.row--around
+    justify-content space-around
+
+.row--align-center
+    align-items center
+
+.row--align-start
+    align-items flex-start
+
+
+for key, value in device
+    if key != movil
+        @media (min-width : value)
+            .container
+                max-width value
+            .row
+                for num in (1..20)
+
+                    .col-{key}-{num*5}
+                        width num*5%
+                        padding 7px 15px
+                        box-sizing border-box
+                        .content
+                            box-sizing border-box
+

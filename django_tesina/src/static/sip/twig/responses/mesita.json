@@ -1,0 +1,17 @@
+{
+	"producto":{
+		"nombre":"Lavadora",
+		"cat_url":"/static/twig/responses/productos-mesitas.json",
+		"marca":"Samsung",
+		"precio":199.99,
+		"moneda":"S/.",
+		"precio_oferta":169.69,
+		"nuevo":true,
+		"proveedor":"Linio",
+		"galeria":[
+				"/static/img/mesita.jpg",
+				"/static/img/mesita.jpg",
+				"/static/img/mesita.jpg"
+			]
+	}
+}

@@ -1,0 +1,9 @@
+-r base.txt
+six==1.10.0
+sqlparse==0.2.3
+django-extensions==1.8.1
+Werkzeug==0.12.2
+django-autofixture==0.12.1
+django-debug-toolbar
+django-filter==1.1.0
+

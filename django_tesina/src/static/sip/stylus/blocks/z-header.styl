@@ -1,0 +1,124 @@
+.header
+	position relative
+	.header-logo
+		text-align center
+		img
+			display block
+	.menu
+		text-align center
+	.menu-item
+		display inline-block
+	.menu-link
+		display inline-block
+		transition-all()
+		&.active, &:hover
+			background-color lightgray
+
+// Menu responsive
+.responsive-logo
+	margin-top 10px
+	width 80%
+	display block
+	img
+		display block
+		width 100%
+		height auto
+
+.menu-overlay
+	position fixed
+	top 0
+	left 0
+	background-color black
+	z-index -1
+	width 100%
+	height 100%
+	opacity 0
+	cursor pointer
+	transition all 0.45s ease
+	&.active
+		z-index 1000
+		opacity 0.8
+.menu-mobile-close, .menu-mobile-open
+	background-color c-1
+	border-radius 7%
+	color white
+	cursor pointer
+	font-size 28px
+	height 42px
+	line-height 42px
+	position fixed
+	right 5px
+	text-align center
+	top 5px
+	transition all 0.45s ease
+	width 42px
+	transform rotate(0deg)
+.menu-mobile-open
+	opacity 1
+	visibility hidden
+	z-index 1002
+	&.scrolling
+		opacity 0.6
+	&:hover
+		opacity 1
+	&.active
+		visibility hidden
+		opacity 0
+		right 220px
+		z-index 1000
+		transform rotate(-90deg)
+.menu-mobile-close
+	visibility hidden
+	opacity 0
+	z-index 1000
+	background white
+	color c-first
+	&.active
+		visibility visible
+		opacity 1
+		right 205px
+		z-index 1002
+		transform rotate(-90deg)
+.menu-sidebar
+	width 200px
+	height 100%
+	overflow auto
+	position fixed
+	top 0
+	right -200px
+	background white
+	z-index 1000
+	transition right 0.45s ease
+	&.active
+		right 0
+.menu-responsive
+	padding-top 10px
+	.menu-item
+		height 48px
+		line-height 48px
+		font-size 16px
+		a
+			display block
+			text-indent 20px
+			&:hover, &.active
+				background-color c-1
+				color white
+
+.cnt-wrapper,.footer
+	position relative
+	left 0
+	transition left 0.45s ease
+	&.active
+		left -200px
+.wrapper
+	overflow hidden
+
+body
+	&.active
+		overflow hidden
+
+@media screen and (max-width:1018px)
+	.menu
+		display none
+	.menu-mobile-open
+		visibility visible

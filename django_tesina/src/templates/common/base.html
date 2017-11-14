@@ -1,0 +1,107 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>PROJECT</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<!--[if lt IE 9]>
+	<script src="{% static "sima/js/html5shiv.js" %}"></script>
+	<script src="{% static "sima/js/respond.min.js" %}"></script>
+	<![endif]-->
+	<!-- Place favicon.ico in the root directory -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+	<link rel="stylesheet" href="{% static "sima/css/normalize.css" %}"/>
+	<link rel="stylesheet" href="{% static "sima/css/main.css" %}"/>
+	<link rel="stylesheet" href="{% static "sima/css/bootstrap.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "sima/css/font-awesome.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "sima/css/owl.carousel.css" %}"/>
+	<link rel="stylesheet" href="{% static "sima/css/responsive.css" %}"/>
+	<link rel="stylesheet" href="{% static "sima/css/style.css" %}"/>
+	<style>
+		.navbar-brand {
+			float: none;
+			padding: 5px;
+		}
+		body {
+			background-image: url("{% static "/img/figlio_fondo.jpg" %}")
+		!important;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-color: #66999;
+		}
+		.opaco{
+		   background-color:rgba(0,0,0,0.5);
+		}
+		.title_sec h4{
+			color: darkseagreen;
+        	text-shadow: 3px 3px black;
+    	}
+		p{
+			font-family: lato !important;
+		}
+		.navbar-brand {
+			float: none;
+			padding: 5px;
+		}
+		#main-header{
+			z-index: 999;
+			background-position: center center !important;
+			background-repeat: no-repeat !important;
+			background-attachment: fixed !important;
+			background-size: cover !important;
+			color: white;
+			height: 65px;
+			width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+			left: 0; /* Posicionamos la cabecera al lado izquierdo */
+			top: 0; /* Posicionamos la cabecera pegada arriba */
+			position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+		}
+	</style>
+	 {% block css_adicional %}
+
+    {% endblock css_adicional %}
+</head>
+<body id="bodywork">
+	{% include "common/header.html" %}
+	<br>
+	{% block content %}
+	 {% endblock content %}
+	 <!-- start preloader -->
+	<div id="loader-wrapper">
+		<div class="logo"></div>
+		<div id="loader">
+		</div>
+	</div>
+
+{% include "common/footer.html" %}
+
+<script src="{% static "sima/js/vendor/jquery-1.9.1.min.js" %}"></script>
+<script src="{% static "sima/js/vendor/jquery-2.1.1.min.js" %}"></script>
+
+<script src="{% static "sima/js/isotope.pkgd.min.js" %}"></script>
+<script src="{% static "sima/js/jquery-ui.min.js" %}"></script>
+<script src="{% static "sima/js/appear.js" %}"></script>
+<script src="{% static "sima/js/jquery.counterup.min.js" %}"></script>
+<script src="{% static "sima/js/waypoints.min.js" %}"></script>
+<script src="{% static "sima/js/owl.carousel.min.js" %}"></script>
+<script src="{% static "sima/js/jquery.nicescroll.min.js" %}"></script>
+<script src="{% static "sima/js/waypoints.min.js" %}"></script>
+<script src="{% static "sima/js/jquery.easing.min.js" %}"></script>
+<script src="{% static "sima/js/scrolling-nav.js" %}"></script>
+<script src="{% static "sima/js/plugins.js" %}"></script>
+<script src="{% static "sima/js/bootstrap.min.js" %}"></script>
+<script src="{% static "sima/js/showHide.js" %}"></script>
+{% block js_final %}
+
+{% endblock js_final %}
+<script src="{% static "sima/js/main.js" %}"></script>
+
+</body>
+</html>

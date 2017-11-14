@@ -1,0 +1,43 @@
+.wrapper
+	display block
+	background color_sidebar
+	.container-main
+		width calc(100% - 250px)
+		position relative
+		margin-left 250px
+		transition 0.3s ease all
+		background color_background
+		padding-bottom 33px
+		box-sizing border-box
+
+	#breadcrumb
+		padding 8px 15px
+		background color_white
+		display flex
+		flex-direction column
+		.title-main
+			margin 10px 0px
+		ul
+			display flex
+			li:last-child
+				&:after
+					content none
+			li:after
+				content "/"
+				margin 0px 5px
+				color color_sidebar
+			li
+				a
+					font-size 14px
+					color color_black
+				a.active
+					color color_main
+
+	#page
+		box-sizing border-box
+		margin 20px 0px
+		/*padding 0px 15px*/
+.wrapper-active
+	.container-main
+		margin-left 100px
+		width calc(100% - 100px)

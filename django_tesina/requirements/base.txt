@@ -1,0 +1,10 @@
+Django==1.11.4
+pytz==2017.2
+Unipath==1.1
+django-dotenv==1.4.1
+psycopg2==2.7.3
+beautifulsoup4==4.5.3
+djangorestframework==3.6.4
+lxml==3.7.2
+django-bulk-update==2.2.0
+requests==2.18.4

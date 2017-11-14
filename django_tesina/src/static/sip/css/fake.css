@@ -1,0 +1,117 @@
+html{
+	font-family: sans-serif;
+	font-size: 14px;
+}
+.label_field{
+	display: inline-block;
+	vertical-align: top;
+	width: 150px;
+}
+.errorlist{
+	margin: 0
+}
+input{
+	width: 100%;
+}
+select{
+	width: 256px;
+}
+input[type="checkbox"]{
+	width: auto;
+}
+form{
+	background-color: #e4e4e4;
+	padding: 15px; 
+}
+.field_content{
+	width: 480px;
+	display: inline-block;
+	margin-bottom: 10px;
+	background-color: #eee;
+	border-bottom: 1px solid white;
+	border-right: 1px solid white;
+}
+.help_text{
+	color: #5d5d5d;
+	background-color: #e4e4e4;
+	width: 100%;
+}
+
+.error_inf{
+	color:red;
+	width: 100%;
+	background-color: #e4e4e4;
+}
+.wGlobalErrors{
+	color:red;
+	font-family: sans-serif;
+}
+.tabSpan{
+	width: 25px;
+	display: inline-block;
+}
+.wGlobalContainer{
+	max-width: 100%;
+}
+.wCalendar{
+	width: 100%;
+	height: 60px;
+	border: 1px solid black;
+	border-bottom: 0px solid black;
+}
+.wDayTimeLine{
+	height: 30px;
+	overflow: hidden;
+	border-bottom: 1px solid black;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.wDayTimeLine .wItem{
+	height: 100%;
+	width: 6.25% !important;
+	background-color: #ccc;
+	cursor: move;
+}
+.wDayTimeLine .wItem span.plus{
+	background-color: #618d59;
+	color:white;
+}
+.wDayTimeLine .wItem span.noplus{
+	background-color: #fba36e;
+	color:white;
+}
+.wDayTimeLine .wItem span.elim{
+	background-color: #9c3119;
+	color:white;
+}
+.wDayTimeLine .wItem div.info{
+	text-align: center;
+	color:black;
+	font-size: 10px;
+}
+.wDayTimeLine .wItem span{
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	height: 50%;
+	width: 33.3%;
+}
+.wDayTimeLine .wItem.plus{
+	width: 9.37% !important;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.wRuler{
+	width: 100%;
+	border: 1px solid white;
+}
+.wRuler .wRulerItem{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border: 1px solid #eee;
+	display: inline-block;
+	text-align: center;
+}

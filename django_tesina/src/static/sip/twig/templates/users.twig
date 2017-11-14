@@ -1,0 +1,34 @@
+{% if users %}
+{% for row in users %}
+    <div class="userResult col-xs-4">
+        <div class="data">
+            <h1>{{ row.type }}</h1>
+            <p>
+                Nombres: {{ row.fullnames }}<br>
+                Código: {{ row.code }}<br>
+                Teléfono: {{ row.phone }}<br>
+                Email: {{ row.e_mail }}<br>
+            </p>
+        </div>
+        <div class="actions">
+            <button class="btn btn-success convocarUserResult"  data-user="Convocado: {{ row.fullnames }} : {{ row.e_mail }} : {{ row.phone }}">Convocar</button>
+        </div>
+    </div>
+{% endfor %}
+<script type="text/javascript">
+    $('.convocarUserResult').click(function(){
+        prev = '<div class="convItem col-xs-12"><div class="col-xs-10">';
+        next = '</div><div class="col-xs-2"><button class="btn btn-danger deleteConv pull-right">Eliminar</button></div>';
+        $('.convocados').append(prev+$(this).attr('data-user')+next);
+        $(this).parent().parent().remove();
+    });
+    $('.convocados').on('click','.deleteConv',function(){
+        $(this).parent().parent().remove();
+    });
+</script>
+{% else %}
+    <div class="userResult col-xs-6">
+        <h1>No hay resultados</h1>
+        <p>no se han hecontrado usuarios que conincidan con los parametros de busqueda</p>
+    </div>
+{% endif %}

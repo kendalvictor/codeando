@@ -1,0 +1,31 @@
+{% extends "common/base.html" %}
+{% load static %}
+{% block content %}
+
+{% include "common/contactus.html" %}
+{% include "common/locatedmap.html" %}
+
+{% endblock content %}
+{% block js_final %}
+<!-- Google Map js -->
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+    function initialize() {
+      var mapOptions = {
+        zoom: 14,
+        scrollwheel: false,
+        center: new google.maps.LatLng(-12.082321, -76.943446)
+      };
+      var map = new google.maps.Map(document.getElementById('googleMap'),
+          mapOptions);
+      var marker = new google.maps.Marker({
+        position: map.getCenter(),
+        animation:google.maps.Animation.BOUNCE,
+        icon: "{% static "sima/img/map-marker.png" %}",
+        map: map
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+{% endblock js_final %}

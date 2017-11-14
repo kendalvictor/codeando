@@ -1,0 +1,48 @@
+// creditos
+.footer-copy
+	overflow hidden
+	font-size 13px
+	height 32px
+	.wancho
+		overflow hidden
+		margin-top 9px
+.footer-copy-left
+	float left
+	p
+		margin 0
+.footer-copy-right
+	float right
+.staffcreativa
+	position relative
+	padding-right 0.45em
+	transition-all()
+	font-family 'arial'
+	&:after
+		content '\e60e'
+		font-family icomoon
+		font-size 0.7em
+		font-style normal
+		font-variant normal
+		font-weight normal
+		line-height 1
+		position absolute
+		right 0
+		speak none
+		text-transform none
+		top 0.1em
+.link-staff
+	&:hover .staffcreativa
+		color #000
+
+@media screen and (max-width: 620px)
+	// creditos
+	.footer-copy
+		height auto
+		text-align center
+		font-size 12px
+		margin auto
+		padding 8px 0 12px
+	.footer-copy-left
+		float none
+	.footer-copy-right
+		float none

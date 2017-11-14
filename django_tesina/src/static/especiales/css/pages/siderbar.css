@@ -1,0 +1,100 @@
+/*   NAV    */
+.aside-main {
+  width: 250px;
+}
+.aside-main .cnt-logo-admin {
+  background: c-info;
+}
+.aside-main .cnt-logo-admin .titulo {
+  text-align: center;
+  padding: 10px 10px;
+}
+.aside-main .cnt-logo-admin .titulo h1 {
+  color: c-blanco;
+  font-family: roboto;
+  font-weight: 400;
+  font-size: f-titulo-admin;
+}
+.aside-main .cnt-usuario {
+  padding: 10px 10px;
+  background: c-nav;
+}
+.aside-main .cnt-usuario figure {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+.aside-main .cnt-usuario figure img {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.aside-main .cnt-usuario .usuario {
+  padding: 5px 5px;
+  display: inline-block;
+  width: 160px;
+  vertical-align: top;
+}
+.aside-main .cnt-usuario .usuario h3.usuario-nombre {
+  color: c-blanco;
+  font-family: roboto;
+  font-weight: 400;
+  font-size: f-subtitulo;
+}
+.aside-main .cnt-usuario .usuario p.usuario-cargo {
+  color: c-default;
+  font-family: roboto;
+  font-weight: 400;
+  font-size: f-texto;
+}
+.aside-main .cnt-menu {
+  background: c-nav;
+}
+.aside-main .cnt-menu ul.ul-header-main span {
+  color: c-blanco;
+  font-family: roboto;
+  font-size: f-normal;
+  font-weight: 400;
+}
+.aside-main .cnt-menu ul.ul-header-main >li {
+  cursor: pointer;
+  list-style-type: none;
+}
+.aside-main .cnt-menu ul.ul-header-main >li >a:hover {
+  background: c-nav;
+  border-left: c-success 3px solid;
+}
+.aside-main .cnt-menu ul.ul-header-main >li >a {
+  background: c-nav-hover;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  border-left: solid 3px transparent;
+  padding: 15px 10px 15px 30px;
+  display: block;
+}
+.aside-main .cnt-menu ul.ul-header-main ul.menu-secund-active {
+  height: auto !important;
+}
+.aside-main .cnt-menu ul.ul-header-main ul.menu-secund {
+  height: 0;
+  visibility: hidden;
+}
+.aside-main .cnt-menu ul.ul-header-main ul.menu-secund li {
+  cursor: pointer;
+  list-style-type: none;
+}
+.aside-main .cnt-menu ul.ul-header-main ul.menu-secund li a {
+  background: c-nav;
+  display: block;
+  padding: 15px 10px 15px 55px;
+}
+.aside-main .cnt-menu ul.ul-header-main ul.menu-secund li a span {
+  font-size: f-texto;
+}

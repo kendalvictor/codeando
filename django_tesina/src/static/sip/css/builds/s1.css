@@ -1,0 +1,20 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.dsd {
+  background-color: #f00;
+}
+.sads {
+  text-align: center;
+}
+.sads .dss {
+  background-color: #00f;
+}

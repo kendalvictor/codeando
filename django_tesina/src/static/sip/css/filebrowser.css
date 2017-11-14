@@ -1,0 +1,29 @@
+.pulldown-versions-container{
+	margin-right: 5px;
+}
+#changelist table tbody tr td{
+	padding: 5px;
+}
+#changelist table tbody tr td:first-child{
+	width: 165px;
+}
+.changelist-filter{
+	margin-bottom: 0px !important;
+}
+.wBlockFilterContent{
+	width: 40%;
+	display: inline-block;
+	line-height: 14px;
+}
+.wLastItem ul li{
+	float: left;
+	width: 45%;
+}
+#content > h1{
+	line-height: 0px !important;
+}
+ul.object-tools li{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0px;        
+}

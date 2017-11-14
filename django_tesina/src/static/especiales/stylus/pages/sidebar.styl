@@ -1,0 +1,179 @@
+@import "../themes/default.styl"
+
+.wrapper
+    display flex
+    .aside-main
+        transition 0.3s ease all
+        position absolute
+        width 250px
+        height 100%
+        background color_sidebar
+
+        .cnt-logo-admin
+            height 60px
+            background color_white
+            display flex
+
+            align-items center
+            justify-content center
+
+            .titulo
+                text-align center
+                /*padding 10px 10px*/
+                h2
+                    color color_white
+                    font-weight 400
+                img
+                    height 60px
+                    width auto
+                img.logo
+
+                    display block
+                img.logo-responsive
+                    display none
+        .cnt-usuario
+            padding 10px 10px
+            display flex
+            flex-direction column
+            justify-content center
+            align-items center
+            background lighten(color_sidebar, 10%)
+            figure
+                border-radius 50%
+                width 50px
+                display inline-block
+                vertical-align top
+                margin 0px
+
+                img
+                    border-radius 50%
+                    display block
+                    width 100%
+                    height auto
+            .usuario
+                padding 5px 5px
+                display inline-block
+                width 160px
+                vertical-align top
+                h4.usuario-nombre
+                    color color_white
+                    /*font-family roboto*/
+                    font-weight 400
+
+                p.usuario-cargo
+
+                    /*font-family roboto*/
+                    color color_white
+                    margin 0px
+                    margin-top 5px
+                    font-weight 400
+
+        .cnt-menu
+            background color_sidebar
+            .menu-navegacion
+                padding-left 25px
+                h5
+                    color color_main
+            ul.ul-menu-main
+                padding 0
+                i.icon-sidebar
+                    margin-right 5px
+                span
+
+                    font-size 13px
+                    font-weight 400
+                .icon-arrow-menu
+                    font-size 10px
+                    float right
+                    margin-top 4px
+                >li:hover
+
+                    border-left color_main 4px solid
+                >li
+                    cursor pointer
+                    list-style-type none
+                    border-left solid 4px transparent
+                    position relative
+                    >a:hover
+                        background lighten(color_sidebar, 10%)
+                        color color_main
+                    >a
+                        color color_white
+                        /*background red*/
+                        transition 0.2s ease all
+                        padding 10px 20px 10px 20px
+                        display block
+
+                    ul.menu-secund
+                        background lighten(color_sidebar, 10%)
+                        display none
+                        /*max-height 0px*/
+                        /*overflow hidden
+                        transition 0.5s ease all*/
+                        li
+                            cursor pointer
+                            a
+
+                                display block
+                                color color_white
+                                transition 0.2s ease all
+                                padding 10px 10px 10px 50px
+                                span
+                                    font-size 13px
+                                &:hover
+                                    color color_main
+                >li.active
+                    border-left color_main 4px solid
+                    >a
+                        background lighten(color_sidebar, 10%)
+                        color color_main
+                   /* ul.menu-secund
+
+                        max-height 500px*/
+
+
+.wrapper-active
+    .aside-main
+        width 100px
+        .cnt-logo-admin
+            font-size 0.6em
+            .titulo
+                img.logo
+                    display none
+                img.logo-responsive
+                    display block
+
+        .cnt-usuario
+            display none
+        .cnt-menu
+            ul.ul-menu-main
+                >li
+                    a
+                        span.text-menu
+                            display none
+                    ul.menu-secund
+                        position absolute
+                        left 100%
+                        top 0
+                        z-index 50
+                        min-width 150px
+            .menu-navegacion
+                padding-left 0
+                text-align center
+@media (max-width: 960px)
+    .wrapper
+        .container-main
+            width 100%
+            margin-left 0px
+        .aside-main
+            width 0
+            overflow hidden
+
+    .wrapper-active
+        .container-main
+            width calc(100% - 100px)
+            margin-left 100px
+        .aside-main
+            overflow inherit !important
+            width 100px
+
