@@ -5,6 +5,23 @@
         font-size: 5em;
         text-shadow: 3px 3px black;
     }
+    input {
+        font: 18px Helvetica, Arial, sans-serif;
+        box-sizing: border-box;
+        display: block;
+        padding: 20px;
+        margin-bottom: 20px;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+        border-color: darkslategray;
+    }
+
+    input::placeholder {
+        transition: all 0.2s ease-in-out;
+        color: #999;
+        font: 18px Helvetica, Arial, sans-serif;
+    }
+
 </style>
 <section id="portada_sec">
     <div class="container">
@@ -23,13 +40,11 @@
                               <div class="caption_carousel">
                                 <div id="luffabella">Etiquetador
                                     Gramatical</div>
-                                <button style="background-color: #0b0b0b"
-                                   id="conocenos">
-                                    <a href="#slider_sec" id="enlaceconocenos"
-                                      style="color:white;background-color: #0b0b0b">
-                                        <i class="fa fa-hand-pointer-o" style="margin-right: 3px"></i>Conóceme
-                                    </a>
-                                </button>
+                                  <input type="text"
+                                         placeholder="Ingrese la frase a etiquetar, porfavor no ingresar signos"
+                                         size="300"
+                                         maxlength="300"
+                                         id="input_word">
                               </div>
                             </div>
                         </div>

@@ -1,8 +1,8 @@
-def factorial(n):
-	print("*"*n)
-	res = n * factorial(n - 1) if n > 0 else 1
-	print("*"*n)
-	return res
 
-print(factorial(5))
+def draw_tri(n, veces=1):
+	print("*"*veces)
+	draw_tri(n - 1, veces=veces + 1) if n > 0 else 1
+	print("*"*veces)
+
+draw_tri(6)
 
