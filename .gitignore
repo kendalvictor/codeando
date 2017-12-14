@@ -182,3 +182,4 @@ venv.bak/
 .mypy_cache/
 
 # End of https://www.gitignore.io/api/git,python,django,pycharm
+machine_learning/autodidacta_relopezbriega/LEARNING_procesado.csv
