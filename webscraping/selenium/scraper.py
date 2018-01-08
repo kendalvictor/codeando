@@ -7,11 +7,17 @@ import re
 import time
 import sys
 import random
+from threading import Thread
+import logging
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import WebDriverException
+
+
+#logging.basicConfig(level=logging.DEBUG,
+#                    format='[%(levelname)s] - %(threadName)-10s : %(message)s')
 
 BASE_DIR = path.dirname(path.abspath(__file__))
 SCROLL_PAUSE_TIME = 1.5
@@ -35,11 +41,9 @@ mobile_emulation = {
 chrome_options = Options()
 chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 driver = webdriver.Chrome(chrome_options=chrome_options)
+#driver.set_page_load_timeout(15)
 
 dicc_portales = {
-    'http://elshow.pe/': [
-        '', 'cine', 'realitys/combate', 'espectaculos', 'realitys/esto-es-guerra', 'fotos',
-        'insolito', 'musica', 'realitys', 'realitys/reto-de-campeones', 'tv'],
     'http://ojo.pe/': [
         '', 'actualidad', 'casos-del-corazon', 'ciudad', 'deportes', 'horoscopo',
         'internacional', 'locomundo', 'mascotas', 'misterios', 'ojo-show','policial',
@@ -47,16 +51,9 @@ dicc_portales = {
     'http://mujerpandora.com/': [
          '', 'videos', 'fotos', 'autor/mcancha/', 'noticias/te-cuento', 'amor-y-sexo', 'belleza',
          'espectaculos', 'familia', 'mistica', 'moda', 'salud', 'slam', 'trabajo'],
-    'http://diariocorreo.pe/': [
-        '', 'deportes', 'noticias/arequipa', 'espectaculos', 'cultura','especiales-web',
-        'edicion/cusco', 'economia','noticias/amazonas', 'noticias/ancash', 'noticias/apurimac',
-         'noticias/ayacucho', 'noticias/cajamarca','noticias/chimbote', 'chiquitas', 'ciudad',
-         'columnista-web', 'correo-tv', 'gastronomia', 'edicion/huancavelica', 'edicion/huancayo',
-          'edicion/huanuco', 'edicion/ica', 'noticias/iquitos', 'edicion/la-libertad',
-          'edicion/lambayeque','edicion/lima', 'local', 'noticias/madre-de-dios', 'miscelanea',
-          'edicion/moquegua', 'mundo', 'edicion/pasco', 'peru', 'edicion/piura', 'politica', 'edicion/puno',
-        'regional', 'noticias/san-martin', 'edicion/tacna', 'tema-del-dia', 'edicion/tumbes', 'noticias/ucayali',
-        'noticias/whatsapp'],
+    'http://elshow.pe/': [
+        '', 'cine', 'realitys/combate', 'espectaculos', 'realitys/esto-es-guerra', 'fotos',
+        'insolito', 'musica', 'realitys', 'realitys/reto-de-campeones', 'tv'],
     'http://elbocon.pe/': [
         '', 'fotos', 'otros-deportes/basketball', 'otros-deportes/carrera-de-autos',
         'otros-deportes/contacto-wwe-y-ufc', 'futbol-peruano/copa-inca',
@@ -68,7 +65,17 @@ dicc_portales = {
          'internacional/ligas-extranjeras', 'el-boconcito/nutricion', 'otros-deportes',
          'futbol-peruano/promocion-y-reservas', 'futbol-peruano/segunda-division',
          'futbol-peruano/seleccion-peruana', 'otros-deportes/surf', 'zona-del-hincha',
-         'internacional/transferencias', 'otros-deportes/voley']
+         'internacional/transferencias', 'otros-deportes/voley'],
+    'http://diariocorreo.pe/': [
+        '', 'deportes', 'noticias/arequipa', 'espectaculos', 'cultura','especiales-web',
+        'edicion/cusco', 'economia','noticias/amazonas', 'noticias/ancash', 'noticias/apurimac',
+         'noticias/ayacucho', 'noticias/cajamarca','noticias/chimbote', 'chiquitas', 'ciudad',
+         'columnista-web', 'correo-tv', 'gastronomia', 'edicion/huancavelica', 'edicion/huancayo',
+          'edicion/huanuco', 'edicion/ica', 'noticias/iquitos', 'edicion/la-libertad',
+          'edicion/lambayeque','edicion/lima', 'local', 'noticias/madre-de-dios', 'miscelanea',
+          'edicion/moquegua', 'mundo', 'edicion/pasco', 'peru', 'edicion/piura', 'politica', 'edicion/puno',
+        'regional', 'noticias/san-martin', 'edicion/tacna', 'tema-del-dia', 'edicion/tumbes', 'noticias/ucayali',
+        'noticias/whatsapp']
 }
 
 
@@ -77,20 +84,24 @@ def clean_tag_v2(enlace, urlbase):
     return list_enlace[1 if list_enlace.__len__() > 1 else 0] if list_enlace else None
 
 
-def process_data(tagg, urlbase, search_article=True):
+def process_data(tagg, urlbase, list_url, list_sas, list_dfp, search_article=True):
     enlace_primer_articulo = None
     tagg_analisis = tagg + "{0}marfeelads=2".format( '?' if '?' not in tagg else '&')
     list_url.append(tagg)
     print("tagg_analisis ", tagg_analisis)
 
     driver.get(tagg_analisis)
-    time.sleep(SCROLL_PAUSE_TIME*2.5)
+    time.sleep(SCROLL_PAUSE_TIME*3)
 
     if not driver.execute_script("return document.getElementsByClassName('mrf-madInfo')[0]"):
-        driver.refresh()
-        driver.get(tagg_analisis)
-        print("NECESITO 4 SEG ADICIONALES")
-        time.sleep(SCROLL_PAUSE_TIME*3)
+        try:
+            driver.refresh()
+            driver.delete_all_cookies()
+            driver.get(tagg_analisis)
+            print("NECESITO 5 SEG ADICIONALES")
+            time.sleep(SCROLL_PAUSE_TIME*4)
+        except Exception as e:
+            print("ERROR : ", str(e))
 
     #Inicio de analisis
     if driver.execute_script("return document.getElementsByClassName('mrf-madInfo')[0]"):
@@ -183,37 +194,51 @@ def process_data(tagg, urlbase, search_article=True):
     return enlace_primer_articulo
 
 
+def hilado(func):
+    def decorador(*args, **kwargs):
+        hilo = Thread(target=func, args=args, kwargs=kwargs, name="HiloMetar")
+        hilo.start()
+        hilo.join()
+    return decorador
+
+
+@hilado
+def connection_tags(urlbase, tags):
+    list_dfp = ['DFP']
+    list_sas = ['SAS']
+    list_url = ['URL']
+
+    for tagg in tags:
+        new_enlace = process_data(
+            path.join(urlbase, tagg),
+            urlbase,
+            list_url, list_sas, list_dfp,
+            search_article=True if tagg else False
+        )
+        if not new_enlace:
+            continue
+
+        if urlbase.replace('http', '') not in new_enlace:
+            new_enlace = path.join(urlbase, new_enlace)
+
+        process_data(
+            new_enlace, urlbase,
+            list_url, list_sas, list_dfp,
+            search_article=False)
+
+    list_master = [list_url, list_sas, list_dfp]
+    list_csv = zip(*list_master)
+
+    with open("{0}.csv".format(
+        urlbase.split("/")[-2].split(".")[0]), 'w') as resultFile:
+       wr = csv.writer(resultFile, dialect='excel')
+       for row in list_csv:
+           wr.writerow(row)
+
+
 if __name__ == "__main__":
     for urlbase, tags in dicc_portales.items():
-        list_dfp = ['DFP']
-        list_sas = ['SAS']
-        list_url = ['URL']
-
-        for tagg in tags:
-            new_enlace = process_data(
-                path.join(urlbase, tagg),
-                urlbase,
-                search_article=True if tagg else False
-            )
-            if not new_enlace:
-                continue
-
-            if urlbase.replace('http', '') not in new_enlace:
-                print("ENTROOOOO ///////// ", urlbase, new_enlace)
-                new_enlace = path.join(urlbase, new_enlace)
-            print("new_enlace: ", new_enlace)
-            print("&/--")
-            process_data(new_enlace, urlbase, search_article=False)
-
-        list_master = [list_url, list_sas, list_dfp]
-        list_csv = zip(*list_master)
-
-        with open("{0}.csv".format(
-            urlbase.split("/")[-2].split(".")[0]), 'w') as resultFile:
-           wr = csv.writer(resultFile, dialect='excel')
-           for row in list_csv:
-               wr.writerow(row)
-
+        connection_tags(urlbase, tags)
 
 
 
