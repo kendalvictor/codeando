@@ -3,6 +3,7 @@
 from datetime import datetime
 import csv
 from os import path
+from urllib.parse import urljoin
 import re
 import time
 import sys
@@ -219,7 +220,7 @@ def connection_tags(urlbase, tags):
             continue
 
         if urlbase.replace('http', '') not in new_enlace:
-            new_enlace = path.join(urlbase, new_enlace)
+            new_enlace = urljoin(urlbase, new_enlace)
 
         process_data(
             new_enlace, urlbase,
@@ -230,7 +231,7 @@ def connection_tags(urlbase, tags):
     list_csv = zip(*list_master)
 
     with open("{0}.csv".format(
-        urlbase.split("/")[-2].split(".")[0]), 'w') as resultFile:
+        urlbase.split("/")[-2].split(".")[0]) + "_marfeel", 'w') as resultFile:
        wr = csv.writer(resultFile, dialect='excel')
        for row in list_csv:
            wr.writerow(row)
