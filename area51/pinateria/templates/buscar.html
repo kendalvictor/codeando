@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <form action="">
+        <input type="text" name="termino" value="{{ request.GET.termino }}">
+        <input type="submit" value="Buscar">
+    </form>
+
+    <h1>Resultados</h1>
+    <ul>
+        {% for producto in object_list %}
+            <li><a href="{% url 'detalle' producto.pk %}">{{ producto.personaje }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

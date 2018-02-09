@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Perfil{% endblock %}
+
+{% block contenido %}
+    <h1>Perfil</h1>
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Guardar">
+    </form>
+
+    <h2>Últimos pedidos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pedido in pedidos %}
+            <tr>
+                <td>{{ pedido.codigo }}</td>
+                <td>{{ pedido.producto.nombre_comercial }}</td>
+                <td>{{ pedido.cantidad }}</td>
+                <td>{{ pedido.fecha_emision }}</td>
+                <td>{{ pedido.get_estado_display }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

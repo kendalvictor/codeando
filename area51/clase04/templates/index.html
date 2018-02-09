@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola mundo!</h1>
+    <img src="/static/gatito.jpg" alt="">
+    <h2> {{ nombre }} </h2>
+    {% if mayor %}
+    <h3>Eres mayor de edad</h3>
+    {% else %}
+    <h3>Eres menor de edad</h3>
+    {% endif %}
+
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto.nombre }} - {{ producto.precio }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

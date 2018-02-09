@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <img src="{% static 'gatito.jpg' %}" width="300">
+
+    <h4>Últimos productos:</h4>
+    <ul>
+        {% for producto in productos %}
+            <li><a href="{% url 'detalle' producto.pk %}">{{ producto.personaje }}: S/ {{ producto.precio|floatformat:2 }}</a></li>
+        {% endfor %}
+    </ul>
+
+{#    {% if edad > 18 %}#}
+{#        <h3>Mayor de edad</h3>#}
+{#    {% else %}#}
+{#        <h3>Menor de edad</h3>#}
+{#    {% endif %}#}
+{% endblock %}

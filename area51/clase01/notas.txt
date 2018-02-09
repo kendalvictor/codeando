@@ -1,0 +1,24 @@
+Moises <mcachayt@gmail.com> 954109619
+
+Mac:
+Usuario: admin
+Clave:   pearson
+
+https://slides.com/xpktro/python1/live#/
+http://mundogeek.net/tutorial-python/
+https://learnpythonthehardway.org/
+
+https://brew.sh/
+
+https://www.sublimetext.com/
+https://atom.io/
+http://brackets.io/
+https://code.visualstudio.com/ 
+https://www.jetbrains.com/pycharm/  #ide pro
+https://repl.it/languages/python3   #consola python3 online
+
+    Quijote.txt: https://github.com/Area51TrainingCenter/PythonGroup_04/raw/master/clase1/quijote.txt
+    Repositorios Anteriores:
+    - https://github.com/Area51TrainingCenter/PythonGroup_05
+    - https://github.com/Area51TrainingCenter/PythonGroup_06
+    - https://github.com/Area51TrainingCenter/PythonGroup_07

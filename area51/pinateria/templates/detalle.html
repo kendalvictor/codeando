@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}{{ producto.personaje }}{% endblock %}
+{% block contenido %}
+    <h2>{{ producto.personaje }}</h2>
+    <h4>Comercialmente: {{ producto.nombre_comercial }}</h4>
+    <p>{{ producto.descripcion|linebreaksbr }}</p>
+    <h4>Precio: S/ {{ producto.precio|floatformat:2 }}</h4>
+    <h4>Imágenes:</h4>
+    <ul>
+        {% for imagen in producto.imagenproducto_set.all %}
+        <li><img src="{{ imagen.imagen.url }}" width="100"></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'generar' producto.pk %}">Pedir este producto</a>
+
+{% endblock %}

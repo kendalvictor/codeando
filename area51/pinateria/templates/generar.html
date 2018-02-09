@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Pedido{% endblock %}
+
+{% block contenido %}
+    <h1>Pedido</h1>
+    <h2>Producto: {{ producto.personaje }}</h2>
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Enviar Pedido">
+    </form>
+{% endblock %}
