@@ -1,0 +1,14 @@
+def FindLabel ( [ZN] ):
+	zonificacion= [ZN]
+	if zonificacion == 'E3':
+		return "Educación Superior Universitaria".upper()
+	elif zonificacion == 'OU':
+		return "OTROS USOS".upper()
+	elif zonificacion == 'IEL':
+		return "Industria Elemental Liviana".upper()
+	elif zonificacion == 'ZRP':
+		return "ZONA DE RECREACION PUBLICA".upper()
+	elif zonificacion == 'I2':
+		return "INDUSTRIA LIVIANA".upper()
+	else:
+		return ""

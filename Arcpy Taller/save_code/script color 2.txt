@@ -1,0 +1,2 @@
+def FindLabel ( [id_zona], [muni]  ):
+  return "<CLR red='255'><FNT size = '10'>" + [muni].upper() + "</FNT></CLR>"+"\n"+ "<CLR blue='255'><FNT size = '8'>" + [id_zona][6:9] + "</FNT></CLR>"

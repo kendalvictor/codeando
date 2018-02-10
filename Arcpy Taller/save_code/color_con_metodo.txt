@@ -1,0 +1,8 @@
+def add_syle(color, size, dentro):
+    return "<CLR red='{0}'><FNT size ='{1}'>{2}</FNT></CLR>".format(
+        color, size, dentro)
+
+def FindLabel([id_zona], [muni]):
+    return '{0} \n {1}'.format (
+        add_syle('red', 10, [muni].upper()),
+        [id_zona][6:9])   

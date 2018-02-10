@@ -1,0 +1,5 @@
+def FindLabel ([id_zona] ):
+  if [id_zona][6:9] == '03A':
+    return "<CLR blue='255'><FNT size = '14'>" + [id_zona][6:9] + "</FNT></CLR>"
+  else:
+    return "<CLR red='255'><FNT size = '14'>" + [id_zona][6:9] + "</FNT></CLR>"

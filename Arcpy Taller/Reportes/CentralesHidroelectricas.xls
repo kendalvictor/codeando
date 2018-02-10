@@ -1,0 +1,6 @@
+Detalle de los campos de centrales hidroelectricas
+==================================================
+Campo:OBJECTID 	 Tipo:OID 	 Longitud:4
+Campo:Shape 	 Tipo:Geometry 	 Longitud:0
+Campo:Nomb_Proy 	 Tipo:String 	 Longitud:254
+Campo:Potencia 	 Tipo:Double 	 Longitud:8

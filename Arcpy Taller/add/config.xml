@@ -1,0 +1,16 @@
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Name>Python Addin</Name><AddInID>{518c721e-b8b6-4dfb-93ea-24b2dba30a96}</AddInID><Description>practinado aqui pss todo tranqui</Description><Version>0.1</Version><Image>Images\ico.png</Image><Author>Victor Villacorta</Author><Company>Grupo Comercio</Company><Date>02/03/2018</Date><Targets><Target name="Desktop" version="10.1" /></Targets><AddIn language="PYTHON" library="add_addin.py" namespace="add_addin"><ArcMap>
+    <Commands>
+        <Button caption="Button" category="Python Addin" class="ButtonClass1" id="add_addin.button" image="Images\ic.png" message="My first tool" tip="saludo"><Help heading="" /></Button>
+        <Button caption="Button" category="Python Addin" class="ButtonClass2" id="add_addin.button_1" image="Images\buffer.png" message="" tip="Bufer"><Help heading="" /></Button>
+        <Button caption="Button" category="Python Addin" class="ButtonClass3" id="add_addin.button_2" image="Images\on.png" message="" tip="Enciende Cpas"><Help heading="" /></Button>
+        <Button caption="Button" category="Python Addin" class="ButtonClass4" id="add_addin.button_3" image="Images\off.png" message="" tip="Apaga capas"><Help heading="" /></Button>
+        <Button caption="Button" category="Python Addin" class="ButtonClass5" id="add_addin.button_4" image="Images\id.png" message="" tip="Id masivo"><Help heading="" /></Button>
+        </Commands>
+    <Extensions>
+        </Extensions>
+    <Toolbars>
+        <Toolbar caption="Toolbar" category="Python Addin" id="add_addin.toolbar" showInitially="true"><Items><Button refID="add_addin.button" /><Button refID="add_addin.button_1" /><Button refID="add_addin.button_2" /><Button refID="add_addin.button_3" /><Button refID="add_addin.button_4" /></Items></Toolbar>
+        </Toolbars>
+    <Menus>
+        </Menus>
+    </ArcMap></AddIn></ESRI.Configuration>

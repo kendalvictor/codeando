@@ -1,0 +1,7 @@
+Reporte de Centrales Hidroelectricas 
+ ==============================
+Campo : OBJECTID / Tipo de dato : OID / Longitud : 4
+Campo : Shape / Tipo de dato : Geometry / Longitud : 0
+Campo : Nomb_Proy / Tipo de dato : String / Longitud : 254
+Campo : Potencia / Tipo de dato : Double / Longitud : 8
+Campo : Rango / Tipo de dato : String / Longitud : 20

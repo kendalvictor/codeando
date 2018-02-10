@@ -1,0 +1,13 @@
+PythonWin
+=========
+https://sourceforge.net/projects/pywin32/files/pywin32/Build%20220/
+
+
+Notepad++
+=========
+https://notepad-plus-plus.org/download/v7.html
+
+
+https://pyformat.info/
+https://docs.python.org/2/library/string.html
+https://docs.python.org/2/library/stdtypes.html

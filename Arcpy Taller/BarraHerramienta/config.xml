@@ -1,0 +1,16 @@
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Name>Mis herramientas</Name><AddInID>{658df094-63d3-43e0-a1be-166d9342b6fc}</AddInID><Description>Barra de herramienta</Description><Version>0.1</Version><Image>Images\PythonTools.png</Image><Author>Richard</Author><Company>GIS</Company><Date>01/06/2018</Date><Targets><Target name="Desktop" version="10.2" /></Targets><AddIn language="PYTHON" library="BarraHerramienta_addin.py" namespace="BarraHerramienta_addin"><ArcMap>
+    <Commands>
+        <Button caption="Saludo" category="Mis herramientas" class="ButtonClass1" id="BarraHerramienta_addin.button" image="Images\mensaje.png" message="Saludo de bienvenida" tip="Saludo"><Help heading="" /></Button>
+        <Button caption="Buffer" category="Mis herramientas" class="ButtonClass2" id="BarraHerramienta_addin.button_1" image="Images\buffer_1.png" message="Buffer" tip="Herramienta de geoproceso"><Help heading="" /></Button>
+        <Button caption="ActivaCapa" category="Mis herramientas" class="ButtonClass3" id="BarraHerramienta_addin.button_2" image="Images\on.png" message="Activa capa" tip="Activa capa de un dataframe"><Help heading="" /></Button>
+        <Button caption="DesactivaCapa" category="Mis herramientas" class="ButtonClass4" id="BarraHerramienta_addin.button_3" image="Images\off.png" message="Desactiva capa" tip="Desactiva capa de un mapa"><Help heading="" /></Button>
+        <Button caption="IdMasivo" category="Mis herramientas" class="ButtonClass5" id="BarraHerramienta_addin.button_4" image="Images\id.png" message="Herramienta que genera ID Masivo" tip="Id Masivo"><Help heading="" /></Button>
+        </Commands>
+    <Extensions>
+        </Extensions>
+    <Toolbars>
+        <Toolbar caption="Taller1" category="Mis herramientas" id="BarraHerramienta_addin.toolbar" showInitially="true"><Items><Button refID="BarraHerramienta_addin.button" /><Button refID="BarraHerramienta_addin.button_1" /><Button refID="BarraHerramienta_addin.button_2" /><Button refID="BarraHerramienta_addin.button_3" /><Button refID="BarraHerramienta_addin.button_4" /></Items></Toolbar>
+        </Toolbars>
+    <Menus>
+        </Menus>
+    </ArcMap></AddIn></ESRI.Configuration>
