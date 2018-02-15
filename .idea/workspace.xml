@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb349b4d-d5b7-46b4-829b-72aa236f9d41" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/CLASE 1/edad.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/CLASE 1/notas.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/CLASE 1/palindromo.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/CLASE 1/quijote.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/CLASE 1/quijote.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/CLASE 1/simple_nombre.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/clases.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/clases_type.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/constantes/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/constantes/fisica.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/constantes/matematicas.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/fixer_request.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/funcional.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/inicio.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/quick.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/recursividad.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase 2/usando_dis.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/autor_libro.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/captcha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/captcha_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/consulta_sunat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/cuenta_corriente.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/eng.traineddata" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/figura_geometrica.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/precio_oro.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/quijote.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/area51/clase3/quijote.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +13,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +33,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/area51/clase 2/recursividad.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -94,6 +80,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,13 +102,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vvillacorta" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -158,8 +144,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="24" width="1311" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22773838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23089047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -167,7 +154,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18035427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33011273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -191,7 +178,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/area51/clase 2/inicio.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -199,26 +186,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/area51/clase 2/recursividad.py">
+    <entry file="file://$PROJECT_DIR$/area51/clase 2/inicio.py" />
+    <entry file="file://$PROJECT_DIR$/area51/clase 2/recursividad.py" />
+    <entry file="file://$PROJECT_DIR$/area51/clase 2/inicio.py" />
+    <entry file="file://$PROJECT_DIR$/area51/clase 2/recursividad.py" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/area51/clase 2/inicio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/area51/clase 2/recursividad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="137">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding />
         </state>
       </provider>

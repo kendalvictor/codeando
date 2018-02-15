@@ -1,0 +1,4 @@
+Django==2.0.1
+Unipath==1.1
+python-dotenv==0.7.1
+psycopg2==2.7.3.2
