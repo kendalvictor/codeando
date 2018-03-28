@@ -1,0 +1,19 @@
+EN HTML
+
+
+	{% if d %}
+		<label>MISIONES:</label>
+		<hr/>
+		{% for missio,astro in d %}
+			<p>{{misso.nombreM}}</p>
+			{% for a in astro %}
+				<p>{{a.nombre}}</p>
+			{% endfor%}
+		{% endfor %}
+	{% endif %}
+
+
+EN VIEWS.PY
+
+
+

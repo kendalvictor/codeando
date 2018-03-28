@@ -1,0 +1,9 @@
+[base_de_datos]
+servidor= 127.0.0.1
+usuario= root
+clave= python2015!
+puerto= 3306
+
+[configuracion]
+procesos= 10
+path = /opt/malware
