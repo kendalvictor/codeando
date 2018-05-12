@@ -36,12 +36,14 @@ users_agents = [
 ]
 
 mobile_emulation = {
-    "deviceMetrics": { "width": 500, "height": 900, "pixelRatio": 3.0 },
+    "deviceMetrics": {"width": 500, "height": 900, "pixelRatio": 3.0 },
     "userAgent": random.choice(users_agents)
 }
 chrome_options = Options()
 chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
-driver = webdriver.Chrome(chrome_options=chrome_options)
+driver = webdriver.Chrome(
+    executable_path='/home/villacorta/STORAGE/codeando/webscraping''/selenium/chromedriver',
+    chrome_options=chrome_options)
 #driver.set_page_load_timeout(15)
 
 dicc_portales = {

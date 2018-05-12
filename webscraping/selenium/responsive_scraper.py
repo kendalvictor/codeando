@@ -29,7 +29,9 @@ sys.path.append(BASE_DIR)
 chrome_options = Options()
 chrome_options.add_argument("--window-size=500,900")
 chrome_options.add_argument("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36")
-driver = webdriver.Chrome(chrome_options=chrome_options)
+driver = webdriver.Chrome(
+    executable_path='/home/villacorta/STORAGE/codeando/webscraping/selenium/chromedriver',
+    chrome_options=chrome_options)
 
 dicc_portales = {
     'http://diariocorreo.pe/': [
