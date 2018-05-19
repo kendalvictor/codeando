@@ -17,7 +17,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from requests.auth import HTTPBasicAuth
 
@@ -70,8 +70,58 @@ def get_trivia():
         driver.add_cookie({'name': 'csrftoken','value': 'fdmVvORaQAl6eBsQtxhxGw4IpFwDcM3PvFzn21eSoJ9VFnrOTUwsLmQIupiKP057'})
         driver.refresh()
     """
+    #driver.set_page_load_timeout(60)
+
     driver.get(url)
-    time.sleep(10)
+    print("GET REALIZADO")
+    #driver.implicitly_wait(10)
+
+    #driver.switchTo().frame("modal-login")
+    #driver.switch_to_frame("modal-login")
+    #captcha_iframe = driver.execute_script("return document.getElementsByTagName('iframe')[0];")
+    print("----------> ", driver.find_elements_by_tag_name("iframe").__len__())
+    for frame in driver.find_elements_by_tag_name("iframe"):
+        try:
+            print(frame.text)
+            #driver.switch_to.frame(frame)
+            print("==================")
+            print(type(frame), frame)
+            print(dir(frame))
+            op_1 = frame.find_elements_by_id("recaptcha-anchor")
+            print(type(op_1), op_1)
+            op_2 = frame.find_element_by_class_name(
+                "recaptcha-checkbox-checkmark")
+            print(type(op_2), op_2)
+            print("/////////////////////")
+        except Exception as e:
+            print("ERRORRRR ::: ", str(e))
+
+    """
+
+    CheckBox = WebDriverWait(driver, 100).until(
+        EC.presence_of_element_located((By.ID, "recaptcha-anchor"))
+    )
+    """
+    print("BUSQUEDA REALIZADA")
+    """ 
+
+    ActionChains(driver).move_to_element(captcha_iframe).click().perform()
+    # click im not robot
+    captcha_box = WebDriverWait(driver, 10).until(
+        ec.presence_of_element_located(
+            (
+                By.ID, 'g-recaptcha-response'
+            )
+        )
+    )
+    print("----->")
+    driver.execute_script("arguments[0].click()", captcha_box)
+    print("----->")
+    """
+    time.sleep(15)
+
+    """
+
     print("fibish 10 sconds of load")
     captcha_iframe = WebDriverWait(driver, 10).until(
         ec.presence_of_element_located(
@@ -94,14 +144,10 @@ def get_trivia():
     print("----->")
     driver.execute_script("arguments[0].click()", captcha_box)
     print("----->")
+    """
 
-try:
-    while True:
-        get_trivia()
-        time.sleep(60)
-        print("OTRA VEZ")
-except Exception as e:
-    print("ERROR :: ", str(e))
-
+while True:
+    get_trivia()
+    break
 
 print("FIN")
