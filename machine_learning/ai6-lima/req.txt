@@ -1,0 +1,16 @@
+absl-py==0.2.2
+astor==0.6.2
+gast==0.2.0
+grep==0.3.2
+grpcio==1.13.0
+keras==2.2.0
+keras-applications==1.0.2
+keras-preprocessing==1.0.1
+markdown==2.6.11
+msgpack==0.5.6
+opencv-python==3.4.1.15
+protobuf==3.6.0
+tables==3.4.3
+tensorboard==1.8.0
+tensorflow==1.8.0
+termcolor==1.1.0
