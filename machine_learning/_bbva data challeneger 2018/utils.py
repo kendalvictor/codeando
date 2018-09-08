@@ -28,14 +28,17 @@ def null_verificator(data):
     else:
         return "DATA LIMPIA DE NULOS"
 
-def reduce_size_data(df):
-    for col in df.select_dtypes(include=['int']).columns:
+def reduce_size_data(df, category=False):
+    for col in df.select_dtypes(include=[np.int64]).columns:
         df[col] = df[col].apply(pd.to_numeric, downcast='integer')
  
-    for col in df.select_dtypes(include=['float']).columns:
+    for col in df.select_dtypes(include=[np.float64]).columns:
         df[col] = df[col].apply(pd.to_numeric, downcast='float')
-
-    for col in df.select_dtypes(include=['object']).columns:
-        if len(df[col].unique()) / len(df[col]) < 0.5:
-            df[col] = df[col].astype('category')
+    
+    if category:
+        for col in df.select_dtypes(include=['object']).columns:
+            if len(df[col].unique()) / len(df[col]) < 0.5:
+                df[col] = df[col].astype('category')
+    
+    return df
 
