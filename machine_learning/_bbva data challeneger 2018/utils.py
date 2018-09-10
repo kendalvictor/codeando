@@ -42,3 +42,30 @@ def reduce_size_data(df, category=False):
     
     return df
 
+
+def  add_col_dates(data, col, format_match="%d-%b-%y", month=True, day=True, month_day=True,year=True,
+                   weekday=True, replace_str=False, format_str_replace='%Y/%m/%d', replicate_in_test=False):
+    """
+        por optimizar en casos separados para data y test_data
+    """
+    data['date'] = pd.to_datetime(data[col], format=format_match)
+
+    if month:
+        data['month'] = pd.to_numeric(data['date'].dt.strftime('%m'), errors='coerce')
+        data['month'].fillna(-99)  
+    if day:
+        data['day'] = pd.to_numeric(data['date'].dt.strftime('%d'), errors='coerce')
+        data['day'].fillna(-99)
+    if year:
+        data['year'] = pd.to_numeric(data['date'].dt.strftime('%Y'), errors='coerce')
+        data['year'].fillna(-99)
+    if month_day:
+        data['month_day'] = pd.to_numeric(data['date'].dt.strftime('%m%d'), errors='coerce')
+        data['month_day'].fillna(-99)
+    if weekday:
+        data['weekday'] = pd.to_numeric(data['date'].dt.strftime('%w'), errors='coerce')
+        data['weekday'].fillna(-99)
+    if replace_str:
+        data['date'] = data['date'].dt.strftime(format_str_replace)
+        
+    return(data.head(10))
