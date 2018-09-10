@@ -27,7 +27,8 @@ media
 .idea/dictionaries
 
 # Sensitive or high-churn files:
-.idea/**/dataSources/
+.idea/**/
+Sources/
 .idea/**/dataSources.ids
 .idea/**/dataSources.xml
 .idea/**/dataSources.local.xml
@@ -183,3 +184,7 @@ venv.bak/
 
 # End of https://www.gitignore.io/api/git,python,django,pycharm
 machine_learning/autodidacta_relopezbriega/LEARNING_procesado.csv
+machine_learning/**/data/*.csv
+machine_learning/**/data/*.tsv
+machine_learning/**/data/*.xls
+machine_learning/**/data/*.xlsx
