@@ -28,18 +28,24 @@ def null_verificator(data):
     else:
         return "DATA LIMPIA DE NULOS"
 
-def reduce_size_data(df, category=False):
-    for col in df.select_dtypes(include=[np.int64]).columns:
-        df[col] = df[col].apply(pd.to_numeric, downcast='integer')
- 
-    for col in df.select_dtypes(include=[np.float64]).columns:
-        df[col] = df[col].apply(pd.to_numeric, downcast='float')
+def reduce_size_data(df, category=False, default=''):
+    print("Tamaño de uso actual : ", get_memory_usage(df))
+    print("-> Int 64 Detected")
+    for col in df.select_dtypes(include=['int']).columns:
+        print(" "*4, col)
+        df[col] = pd.to_numeric(arg=df[col], downcast=default or'integer')
+    
+    print("-> Float 64 Detected")
+    for col in df.select_dtypes(include=['float']).columns:
+        print(" "*4, col)
+        df[col] = pd.to_numeric(arg=df[col], downcast=default or'float')
     
     if category:
         for col in df.select_dtypes(include=['object']).columns:
             if len(df[col].unique()) / len(df[col]) < 0.5:
                 df[col] = df[col].astype('category')
-    
+                
+    print("Tamaño de uso final : ", get_memory_usage(df))                
     return df
 
 
