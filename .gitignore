@@ -188,3 +188,4 @@ machine_learning/**/data/*.csv
 machine_learning/**/data/*.tsv
 machine_learning/**/data/*.xls
 machine_learning/**/data/*.xlsx
+.idea/*
