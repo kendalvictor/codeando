@@ -18,7 +18,7 @@ def graph_analysis_best_number_cluster(X, range_n_clusters=range(2,11)):
         clusterer = KMeans(n_clusters=n_clusters, random_state=10)
         cluster_labels = clusterer.fit_predict(X)
 
-        silhouette_avg = silhouette_score(X, cluster_labels)
+        silhouette_avg = silhouette_score(X, cluster_labels, sample_size=300)
         print("For n_clusters =", n_clusters,
               "The average silhouette_score is :", silhouette_avg)
 
