@@ -184,7 +184,5 @@ venv.bak/
 
 # End of https://www.gitignore.io/api/git,python,django,pycharm
 machine_learning/autodidacta_relopezbriega/LEARNING_procesado.csv
-machine_learning/**/data/*.csv
-machine_learning/**/data/*.tsv
-machine_learning/**/data/*.xls
-machine_learning/**/data/*.xlsx
+**/data/*
+.idea/*
