@@ -1,3 +1,5 @@
+import inspect
+
 #calculo
 import numpy as np
 import pandas as pd
@@ -75,3 +77,23 @@ def  add_col_dates(data, col, format_match="%d-%b-%y", month=True, day=True, mon
         data['date'] = data['date'].dt.strftime(format_str_replace)
         
     return(data.head(10))
+
+def analysis_for_group(data, list_init, col_output, cant_view=40):
+    analysis_df =  pd.concat([
+        data.groupby(by=list_init)[col_output].count(),
+        data.groupby(by=list_init)[col_output].sum(),
+        data.groupby(by=list_init)[col_output].mean(),
+        data.groupby(by=list_init)[col_output].max(),
+        data.groupby(by=list_init)[col_output].min(),
+        data.groupby(by=list_init)[col_output].skew()
+    ], axis=1)
+    analysis_df.columns = ['Total','Suma', 'Media', 'Max', 'min', 'Sesgo']
+    return analysis_df.head(cant_view)
+
+def get_default_args(func):
+    signature = inspect.signature(func)
+    return {
+        k: v.default
+        for k, v in signature.parameters.items()
+        if v.default is not inspect.Parameter.empty
+    }

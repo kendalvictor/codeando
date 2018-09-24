@@ -3,8 +3,11 @@ from sklearn.metrics import silhouette_samples, silhouette_score
 
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
+import seaborn as sns
 import numpy as np
 import pandas as pd
+
+from utils import get_default_args
 
 def graph_analysis_best_number_cluster(X, range_n_clusters=range(2,11)):
     for n_clusters in range_n_clusters:
@@ -76,3 +79,25 @@ def graph_analysis_best_number_cluster(X, range_n_clusters=range(2,11)):
                      fontsize=14, fontweight='bold')
 
         plt.show()
+
+def graphs_analysis(data, col_init, col_out, **kwargs):
+    color_label = kwargs.get('color_label', 'black')
+    params_default = get_default_args(pd.value_counts)
+    
+    params_default = {
+        k:v for k, v in {**params_default, **kwargs}.items() if k in params_default
+    }
+    
+    print(pd.DataFrame(data[col_init]).corrwith(data[col_out]))
+    
+    fig, axes = plt.subplots(nrows=2, ncols=2)
+    graphs = [
+        data[col_init].value_counts(**params_default).plot(ax=axes[0,0], figsize=(15,10)),
+        data[col_init].value_counts(**params_default).plot.bar(ax=axes[0,1]),
+        sns.lineplot(x=col_init, y=col_out, data=data, ax=axes[1,0]),
+        sns.barplot(x=col_init, y=col_out, data=data, ax=axes[1,1])
+    ]
+    for _ in graphs:
+        _.xaxis.label.set_color(color_label)
+        _.tick_params(colors=color_label)
+
