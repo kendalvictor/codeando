@@ -99,5 +99,40 @@ def graphs_analysis(data, col_init, col_out, **kwargs):
     ]
     for _ in graphs:
         _.xaxis.label.set_color(color_label)
+        _.yaxis.label.set_color(color_label)
         _.tick_params(colors=color_label)
+
+def plot_2d_point(axis_0=[], axis_1=[], color_label=''):
+    color_label = color_label or 'black'
+    clusters_df = pd.DataFrame( { "axis_0":axis_0, "axis_1": axis_1 } )
+    _ = sns.lineplot(x=axis_0, y=axis_1, data=clusters_df)
+    _.xaxis.label.set_color(color_label)
+    _.yaxis.label.set_color(color_label)
+    _.tick_params(colors=color_label)
+
+
+def simple_get_siluet_score(X, cluster_range = range( 2, 15 )):
+    list_silhouette = []
+    for n_clusters in cluster_range:
+        clusterer = KMeans(n_clusters=n_clusters, random_state=10, n_jobs=4, max_iter=750)
+        cluster_labels = clusterer.fit_predict(X)
+        list_silhouette.append(
+            silhouette_score(X, cluster_labels, sample_size=300)
+        )
+        print("For n_clusters =", n_clusters,
+              "The average silhouette_score is :", list_silhouette[-1])
+        
+    plot_2d_point(cluster_range, list_silhouette, color_label='skyblue')
+
+def get_inertia(X, cluster_range = range( 2, 15 )):
+    list_intertia = []
+    for num_clusters in cluster_range:
+        clusters_km = KMeans(num_clusters)
+        clusters_km.fit(X)
+        list_intertia.append(clusters_km.inertia_)
+        print("For n_clusters =", num_clusters,
+              "The inertia is :", list_intertia[-1])
+        
+    plot_2d_point(cluster_range, list_intertia, color_label='skyblue')
+
 
