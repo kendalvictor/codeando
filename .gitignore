@@ -190,3 +190,8 @@ machine_learning/**/data/*.xls
 machine_learning/**/data/*.xlsx
 .idea/*
 data/*
+
+**/requirements/*
+*/requirements/*.txt
+
+
