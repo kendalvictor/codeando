@@ -7,13 +7,13 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options
 
 
-class PythonOrgSearch(unittest.TestCase):
+class TestPwaComercio(unittest.TestCase):
 
     def setUp(self):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-web-security")
-        chrome_options.add_argument("--start-maximized")
+        chrome_options.add_argument("--no-sandbox")
 
         self.driver = webdriver.Chrome(
             executable_path='/home/idigital/Documents/SELENIUM/chromedriver',
@@ -32,13 +32,19 @@ class PythonOrgSearch(unittest.TestCase):
             self.apntag.get('loaded'),
             'Error en validacion de carga de libreria APN'
         )
-    
+
     def test_validate_displayed_publicity(self):
         tags = self.driver.execute_script(
             "return apntag;"
         ).get('requests').get('tags')
 
+        self.assertTrue(
+            tags,
+            'Error en deteccion de peticiones de publicidad'
+        )
+
         for _ in tags:
+            print("publicidad muestra: ", _)
             self.assertTrue(
                 tags[_].get('displayed'),
                 'Error en validacion despliegue de publicidad {}'.format(_)
