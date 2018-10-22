@@ -6,6 +6,8 @@ import time
 # Para tener efecto se debe correr desde la base del proyecto
 sys.path.append(os.getcwd())
 from core.test import TestBase
+from core.settings import dicc_detected
+from core.utils import valid_alias
 
 
 class TestIntegrationAPN(TestBase):
@@ -60,8 +62,9 @@ class TestIntegrationAPN(TestBase):
 
 
 if __name__ == "__main__":
-
-    TestIntegrationAPN.url_analysis = sys.argv.pop()
+    TestIntegrationAPN.url_analysis = valid_alias(
+        dicc_detected.get(sys.argv.pop(), '')
+    )
     print('URL DETECTADA : ', TestIntegrationAPN.url_analysis)
     unittest.main()
     print('/'*45)

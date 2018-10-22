@@ -6,8 +6,7 @@ from .utils import get_driver
 class TestBase(unittest.TestCase):
     url_analysis = ''
     dicc_type = {
-        0: 'desktop',
-        1: 'mobile'
+        0: 'adaptativo',
     }
     list_driver = []
 

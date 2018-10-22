@@ -27,3 +27,10 @@ def get_driver(type_select='desktop'):
         )
 
     return webdriver.Chrome(options=chrome_options)
+
+
+def valid_alias(alias):
+    if not alias:
+        raise Exception('Alias no reconocido')
+
+    return alias

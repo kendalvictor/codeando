@@ -1,53 +1,38 @@
 import unittest
 import time
+import os
+import sys
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+# Para tener efecto se debe correr desde la base del proyecto
+sys.path.append(os.getcwd())
+from core.test import TestBase
+from core.settings import dicc_detected
+from core.utils import valid_alias
 
 
-class TestAPN(unittest.TestCase):
+class TestGoogleAnalytics(TestBase):
 
-    def setUp(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--disable-web-security")
-        chrome_options.add_argument("--no-sandbox")
+    def verificate_load_ga(self, driver, i):
+        time.sleep(3)
+        ga = driver.execute_script("return ga;")
 
-        self.driver = webdriver.Chrome(
-            options=chrome_options
+        self.assertTrue(
+            ga and ga.get('loaded'),
+            self.get_error_type(
+                'Error en validacion de carga de libreria Google Analytics', i)
         )
-        time.sleep(1)
-        self.driver.get('https://pwa.elcomercio.pe')
-        time.sleep(1)
 
     def test_validate_load_ga(self):
-        self.apntag = self.driver.execute_script("return apntag;")
-        self.assertTrue(
-            self.apntag.get('loaded'),
-            'Error en validacion de carga de libreria APN'
-        )
-
-    def test_validate_displayed_publicity(self):
-        tags = self.driver.execute_script(
-            "return apntag;"
-        ).get('requests').get('tags')
-
-        self.assertTrue(
-            tags,
-            'Error en deteccion de peticiones de publicidad'
-        )
-
-        for _ in tags:
-            print("publicidad muestra: ", _)
-            self.assertTrue(
-                tags[_].get('displayed'),
-                'Error en validacion despliegue de publicidad {}'.format(_)
-            )
-
-
+        for i, driver in enumerate(self.list_driver):
+            self.verificate_load_ga(driver, i)
 
 
 if __name__ == "__main__":
+    TestGoogleAnalytics.url_analysis = valid_alias(
+        dicc_detected.get(sys.argv.pop(), '')
+    )
+    print('URL DETECTADA : ', TestGoogleAnalytics.url_analysis)
     unittest.main()
+    print('/'*45)
 
 
